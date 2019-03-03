@@ -34,6 +34,8 @@ public class Menu extends Activity {
             }
         });
 
+        //cambiar la clase dependiendo de la que quiera se llamada por el momento todas van a mapa
+
         conceptos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent next = new Intent(Menu.this, Mapa.class);
