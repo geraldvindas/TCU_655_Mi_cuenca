@@ -45,7 +45,7 @@ public class Menu extends Activity {
 
         leyes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Menu.this, Mapa.class);
+                Intent next = new Intent(Menu.this, Laws.class);
                 startActivity(next);
             }
         });

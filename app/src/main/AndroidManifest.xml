@@ -40,6 +40,7 @@
             android:name=".Mapa"
             android:label="Mapa"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Laws" />
     </application>
 
 </manifest>

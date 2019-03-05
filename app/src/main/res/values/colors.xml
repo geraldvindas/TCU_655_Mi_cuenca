@@ -6,4 +6,10 @@
     <color name="colorAccent2">#efb810</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="magenta">#13AAB4</color>
+    <color name="magentaOscuro">#267FA6</color>
+    <color name="orange">#F29420</color>
+    <color name="red_orange">#AF4234</color>
+    <color name="black_blue">#25455E</color>
 </resources>
