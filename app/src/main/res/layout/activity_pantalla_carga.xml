@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout android:id="@+id/menu"
+<RelativeLayout android:id="@+id/rl_menu"
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,14 +15,14 @@
         android:layout_gravity="bottom|start">
 
         <ImageView
-            android:id="@+id/pantallaCarga"
+            android:id="@+id/iv_pantalla_carga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
             android:scaleType="fitStart"
             android:contentDescription="Pantalla de carga"
             android:src="@drawable/pantalla"
-            app:layout_anchor="@+id/pantallaCarga" />
+            app:layout_anchor="@+id/iv_pantalla_carga" />
     </FrameLayout>
 
 </RelativeLayout>

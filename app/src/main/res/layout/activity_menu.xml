@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout android:id="@+id/menu"
+<RelativeLayout android:id="@+id/rl_menu"
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <FrameLayout android:id="@+id/mapa"
+        <FrameLayout android:id="@+id/fl_mapa"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerVertical="true"
@@ -23,11 +23,11 @@
         </FrameLayout>
 
 
-        <FrameLayout android:id="@+id/conceptos"
+        <FrameLayout android:id="@+id/fl_conceptos"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_alignLeft="@id/mapa"
-            android:layout_above="@id/mapa">
+            android:layout_alignLeft="@id/fl_mapa"
+            android:layout_above="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -40,12 +40,12 @@
         </FrameLayout>
 
 
-        <FrameLayout android:id="@+id/datos"
+        <FrameLayout android:id="@+id/fl_datos"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_alignBottom="@id/mapa"
+            android:layout_alignBottom="@id/fl_mapa"
             android:layout_marginBottom="20dp"
-            android:layout_toLeftOf="@id/mapa">
+            android:layout_toLeftOf="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -57,12 +57,12 @@
 
         </FrameLayout>
 
-        <FrameLayout android:id="@+id/asadas"
+        <FrameLayout android:id="@+id/fl_asadas"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_alignBottom="@id/mapa"
+            android:layout_alignBottom="@id/fl_mapa"
             android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@id/mapa">
+            android:layout_toRightOf="@id/fl_mapa">
             >
 
             <ImageView android:layout_width="80dp"
@@ -76,12 +76,12 @@
         </FrameLayout>
 
 
-        <FrameLayout android:id="@+id/leyes"
+        <FrameLayout android:id="@+id/fl_leyes"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginLeft="50dp"
-            android:layout_alignStart="@id/mapa"
-            android:layout_below="@id/mapa">
+            android:layout_alignStart="@id/fl_mapa"
+            android:layout_below="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -93,13 +93,13 @@
 
         </FrameLayout>
 
-        <FrameLayout android:id="@+id/zonificacion"
+        <FrameLayout android:id="@+id/fl_zonificacion"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginRight="50dp"
-            android:layout_alignEnd="@id/mapa"
+            android:layout_alignEnd="@id/fl_mapa"
 
-            android:layout_below="@id/mapa">
+            android:layout_below="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"

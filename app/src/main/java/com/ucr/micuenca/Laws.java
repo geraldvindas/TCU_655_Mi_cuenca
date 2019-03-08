@@ -21,9 +21,9 @@ public class Laws extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laws);
+        setContentView(R.layout.activity_lista);
 
-        TextView titulo = findViewById(R.id.titulo);
+        TextView titulo = findViewById(R.id.tv_titulo);
         titulo.setText("Leyes");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {

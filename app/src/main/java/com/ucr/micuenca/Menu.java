@@ -21,12 +21,12 @@ public class Menu extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        FrameLayout mapa = findViewById(R.id.mapa);
-        final FrameLayout conceptos = findViewById(R.id.conceptos);
-        FrameLayout asadas  = findViewById(R.id.asadas);
-        FrameLayout zonificacion = findViewById(R.id.zonificacion);
-        FrameLayout datos = findViewById(R.id.datos);
-        final FrameLayout leyes = findViewById(R.id.leyes);
+        FrameLayout mapa = findViewById(R.id.fl_mapa);
+        final FrameLayout conceptos = findViewById(R.id.fl_conceptos);
+        FrameLayout asadas  = findViewById(R.id.fl_asadas);
+        FrameLayout zonificacion = findViewById(R.id.fl_zonificacion);
+        FrameLayout datos = findViewById(R.id.fl_datos);
+        final FrameLayout leyes = findViewById(R.id.fl_leyes);
         mapa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent next = new Intent(Menu.this, Mapa.class);

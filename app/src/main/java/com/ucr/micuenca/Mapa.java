@@ -37,7 +37,7 @@ public class Mapa extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
         mMapView = findViewById(R.id.mapView);
-        TextView titulo = findViewById(R.id.titulo);
+        TextView titulo = findViewById(R.id.tv_titulo);
         titulo.setText("Mapa");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
