@@ -42,6 +42,12 @@ public class Laws extends Activity {
 
         mListAdapter = new ListAdapter(temp);
         mRecyclerView.setAdapter(mListAdapter);
+        mRecyclerView.addOnItemTouchListener(new ClickListener(this, mRecyclerView,  new ClickListener.OnTouchActionListener() {
+                    @Override
+                    public void onClick(View view, int position) {
+                        //position le da el numero de la lista al cual usted le hizo click
+                    }
+                }));
 
         loadData();
 
