@@ -6,6 +6,8 @@ import android.support.v4.content.ContextCompat;
 import com.ucr.micuenca.R;
 
 public class Util {
+
+    public static final int TAMANO_DESCRIPCION_LISTA = 180;
     public static int getColor(int position, Context context){
         int module = position % 6;
         switch (module){
@@ -23,5 +25,11 @@ public class Util {
                 return ContextCompat.getColor(context, R.color.black);
 
         }
+    }
+
+    public static String recortarTexto(String texto, int caracteres){
+        if (texto.length() >= caracteres)
+            return texto.substring(0,caracteres);
+        return texto;
     }
 }

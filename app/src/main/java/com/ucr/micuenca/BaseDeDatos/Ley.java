@@ -1,6 +1,6 @@
 package com.ucr.micuenca.BaseDeDatos;
 
-public class Ley implements Comparable<Ley> {
+public class Ley extends DatoGeneral implements Comparable<Ley>{
     String nombre;
     String resumen;
 
@@ -23,6 +23,16 @@ public class Ley implements Comparable<Ley> {
 
     public void setResumen(String resumen) {
         this.resumen = resumen;
+    }
+
+    @Override
+    public String getTitulo() {
+        return nombre;
+    }
+
+    @Override
+    public String getDescripcion() {
+        return resumen;
     }
 
     @Override

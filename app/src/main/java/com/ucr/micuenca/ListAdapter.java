@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View.OnClickListener;
 
+import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
+
 import java.util.List;
 
 
@@ -19,23 +21,40 @@ import java.util.List;
  */
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
 
-    private List<String> temp;
+    private List<DatoGeneral> temp;
     Context context;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    private final ListAdapterOnClickHandler mClickHandler;
+
+
+    public interface ListAdapterOnClickHandler{
+        void onClick(String title);
+    }
+
+
+    public ListAdapter(ListAdapterOnClickHandler clickHandler){
+        mClickHandler = clickHandler;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder implements OnClickListener{
         public TextView mTitle, mDescription;
 
         public MyViewHolder(View view) {
             super(view);
             mTitle = (TextView) view.findViewById(R.id.tv_item_title);
             mDescription = (TextView) view.findViewById(R.id.tv_item_description);
+            view.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            int posicionAdaptador = getAdapterPosition();
+            DatoGeneral datoGeneral = temp.get(posicionAdaptador);
+            mClickHandler.onClick(datoGeneral.getTitulo());
+        }
     }
 
-    public ListAdapter(List<String> temp_list){
-        this.temp = temp_list;
-    }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -50,9 +69,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
-        String s = temp.get(position);
+        DatoGeneral datoGeneral = temp.get(position);
         myViewHolder.mTitle.setTextColor(Util.getColor(position, context));
-        myViewHolder.mTitle.setText(s);
+        myViewHolder.mTitle.setText(datoGeneral.getTitulo());
+        myViewHolder.mDescription.setText(Util.recortarTexto(datoGeneral.getDescripcion(), Util.TAMANO_DESCRIPCION_LISTA) + "...");
     }
 
 
@@ -61,5 +81,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         return temp.size();
     }
 
+    public void setListData(List<DatoGeneral> datos){
+        temp = datos;
+        notifyDataSetChanged();
+    }
 
+    // Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
 }
