@@ -69,5 +69,5 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
        temp.addAll(leyList);
        accesoDatos.close();
 
-    }
+     }
 }
