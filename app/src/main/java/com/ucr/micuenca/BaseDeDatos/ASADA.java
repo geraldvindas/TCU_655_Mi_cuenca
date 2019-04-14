@@ -1,5 +1,8 @@
 package com.ucr.micuenca.BaseDeDatos;
 
+//TODO hacer que extienda a DatoGeneral
+//TODO crear clase de ASADAS en com.ucr.micuenca
+//TODO hacer algo similar a Leyes, nada mas que crear una ASADA es distinto a crear una Ley por el constructor
 public class ASADA implements Comparable<ASADA> {
     String nombre;
     int aguaConsumida;
@@ -109,4 +112,7 @@ public class ASADA implements Comparable<ASADA> {
     public int compareTo(ASADA o) {
         return 0;
     }
+
+
+    //TODO Hacer metodo que retorne un lista ASADA
 }

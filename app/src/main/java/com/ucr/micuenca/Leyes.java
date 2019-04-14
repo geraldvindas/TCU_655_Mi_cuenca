@@ -63,11 +63,8 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
     }
 
     public void setDataList(){
-       AccesoDatos accesoDatos = AccesoDatos.getInstance(getApplicationContext());
-       accesoDatos.open();
-       List<Ley> leyList = accesoDatos.obtenerListaLey();
+        Ley ley = new Ley();
+       List<Ley> leyList = ley.getListaLey(getApplicationContext());
        temp.addAll(leyList);
-       accesoDatos.close();
-
      }
 }

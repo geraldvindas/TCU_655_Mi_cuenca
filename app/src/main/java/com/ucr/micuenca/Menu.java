@@ -52,6 +52,7 @@ public class Menu extends Activity {
 
         asadas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //TODO agregar que muestre su nueva actividad
                 Intent next = new Intent(Menu.this, Mapa.class);
                 startActivity(next);
             }

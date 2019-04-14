@@ -38,15 +38,11 @@ public class AccesoDatos {
         }
     }
 
-    public List<Ley> obtenerListaLey(){
+    public Cursor obtenerLista(String nombreTabla){
         List<Ley> lista = new ArrayList<>();
-        Cursor cursor = baseDatos.rawQuery("SELECT * FROM Ley", null);
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            lista.add(new Ley(cursor.getString(0), cursor.getString(1)));
-            cursor.moveToNext();
-        }
-        Collections.sort(lista);
-        return lista;
+        Cursor cursor = baseDatos.rawQuery("SELECT * FROM "+nombreTabla+";", null);
+        return cursor;
     }
+
+
 }
