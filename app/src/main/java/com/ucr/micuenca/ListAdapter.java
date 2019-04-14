@@ -86,5 +86,5 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         notifyDataSetChanged();
     }
 
-    // Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
+    // Toast.makeText(this, ", Toast.LENGTH_SHORT).show();
 }

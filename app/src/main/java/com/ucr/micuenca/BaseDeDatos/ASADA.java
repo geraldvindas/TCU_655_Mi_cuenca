@@ -1,9 +1,13 @@
 package com.ucr.micuenca.BaseDeDatos;
 
-//TODO hacer que extienda a DatoGeneral
-//TODO crear clase de ASADAS en com.ucr.micuenca
-//TODO hacer algo similar a Leyes, nada mas que crear una ASADA es distinto a crear una Ley por el constructor
-public class ASADA implements Comparable<ASADA> {
+import android.content.Context;
+import android.database.Cursor;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ASADA extends DatoGeneral implements Comparable<ASADA> {
     String nombre;
     int aguaConsumida;
     int constante;
@@ -27,6 +31,8 @@ public class ASADA implements Comparable<ASADA> {
         this.cantidadBeneficiados = cantidadBeneficiados;
         this.nombreSubcuenca = nombreSubcuenca;
     }
+
+    public ASADA() {}
 
     public String getNombre() {
         return nombre;
@@ -109,10 +115,37 @@ public class ASADA implements Comparable<ASADA> {
     }
 
     @Override
+    public String getTitulo() {
+        return nombre;
+    }
+
+    @Override
+    public String getDescripcion() {
+        return nombreSubcuenca;
+    }
+
+    @Override
     public int compareTo(ASADA o) {
         return 0;
     }
 
-
-    //TODO Hacer metodo que retorne un lista ASADA
+    public List<ASADA> getListaASADA(Context context){
+        List<ASADA> lista = new ArrayList<>();
+        AccesoDatos accesoDatos = AccesoDatos.getInstance(context);
+        accesoDatos.open();
+        Cursor cursor = accesoDatos.obtenerLista("ASADA");
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            lista.add(new ASADA(cursor.getString(0), cursor.getInt(1), cursor.getInt(2)
+                    , cursor.getInt(3), cursor.getInt(4), cursor.getInt(5)
+                    , cursor.getInt(6), cursor.getInt(7), cursor.getInt(8)
+                    , cursor.getString(9)
+            ));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        accesoDatos.close();
+        Collections.sort(lista);
+        return lista;
+    }
 }

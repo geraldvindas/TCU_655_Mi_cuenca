@@ -11,14 +11,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ucr.micuenca.BaseDeDatos.AccesoDatos;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
-import com.ucr.micuenca.BaseDeDatos.Ley;
+import com.ucr.micuenca.BaseDeDatos.ASADA;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHandler {
+public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHandler {
     private RecyclerView mRecyclerView;
     private ListAdapter mListAdapter;
 
@@ -30,11 +29,11 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
         setContentView(R.layout.activity_lista);
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText("Leyes");
+        titulo.setText("ASADAS");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Leyes.this, Menu.class);
+                Intent next = new Intent(ASADAS.this, Menu.class);
                 startActivity(next);
             }
         });
@@ -51,9 +50,7 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
         setDataList();
         mListAdapter.setListData(temp);
 
-
-
-     }
+    }
 
     @Override
     public void onClick(String title) {
@@ -63,8 +60,8 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
     }
 
     public void setDataList(){
-       Ley ley = new Ley();
-       List<Ley> leyList = ley.getListaLey(getApplicationContext());
-       temp.addAll(leyList);
-     }
+        ASADA asada = new ASADA();
+        List<ASADA> asadaList = asada.getListaASADA(getApplicationContext());
+        temp.addAll(asadaList);
+    }
 }
