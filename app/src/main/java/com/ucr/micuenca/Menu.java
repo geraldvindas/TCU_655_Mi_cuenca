@@ -58,14 +58,14 @@ public class Menu extends Activity {
         });
         datos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Menu.this, Zonificacion.class);
+                Intent next = new Intent(Menu.this, Mapa.class);
                 startActivity(next);
             }
         });
 
         zonificacion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Menu.this, Mapa.class);
+                Intent next = new Intent(Menu.this, Zonificacion.class);
                 startActivity(next);
             }
         });

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Zona implements Comparable<Zona> {
+public class Zona extends DatoGeneral implements Comparable<Zona>{
     String nombre;
     String descripcion;
     String actividad;
@@ -29,9 +29,9 @@ public class Zona implements Comparable<Zona> {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
+    /*public String getDescripcion() {
         return descripcion;
-    }
+    }*/
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
@@ -43,6 +43,16 @@ public class Zona implements Comparable<Zona> {
 
     public void setActividad(String actividad) {
         this.actividad = actividad;
+    }
+
+    @Override
+    public String getTitulo() {
+        return nombre;
+    }
+
+    @Override
+    public String getDescripcion() {
+        return descripcion;
     }
 
     @Override
