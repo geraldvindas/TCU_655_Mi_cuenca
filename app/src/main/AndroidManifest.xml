@@ -42,6 +42,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Leyes" />
         <activity android:name=".ASADAS" />
+        <activity android:name=".Zonificacion" />
     </application>
 
 </manifest>

@@ -1,5 +1,12 @@
 package com.ucr.micuenca.BaseDeDatos;
 
+import android.content.Context;
+import android.database.Cursor;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Zona implements Comparable<Zona> {
     String nombre;
     String descripcion;
@@ -9,6 +16,9 @@ public class Zona implements Comparable<Zona> {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.actividad = actividad;
+    }
+
+    public Zona() {
     }
 
     public String getNombre() {
@@ -38,5 +48,21 @@ public class Zona implements Comparable<Zona> {
     @Override
     public int compareTo(Zona o) {
         return 0;
+    }
+
+    public List<Zona> getListaZona(Context context){
+        List<Zona> lista = new ArrayList<>();
+        AccesoDatos accesoDatos = AccesoDatos.getInstance(context);
+        accesoDatos.open();
+        Cursor cursor = accesoDatos.obtenerLista("Zona");
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            lista.add(new Zona(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        accesoDatos.close();
+        Collections.sort(lista);
+        return lista;
     }
 }
