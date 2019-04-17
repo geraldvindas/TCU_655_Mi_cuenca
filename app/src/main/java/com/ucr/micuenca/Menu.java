@@ -70,6 +70,13 @@ public class Menu extends Activity {
             }
         });
 
+        conceptos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent next = new Intent(Menu.this, Conceptos.class);
+                startActivity(next);
+            }
+        });
+
         checkFirstRun();
     }
 

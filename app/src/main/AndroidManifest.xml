@@ -43,6 +43,7 @@
         <activity android:name=".Leyes" />
         <activity android:name=".ASADAS" />
         <activity android:name=".Zonificacion" />
+        <activity android:name=".Conceptos" />
     </application>
 
 </manifest>
