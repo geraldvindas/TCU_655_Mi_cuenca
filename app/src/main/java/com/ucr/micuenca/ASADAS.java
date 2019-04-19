@@ -54,9 +54,13 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
 
     @Override
     public void onClick(String title) {
-        Context context = this;
-        Toast.makeText(context, title, Toast.LENGTH_SHORT)
-                .show();
+//        RelativeLayout vistaAsada = findViewById(R.id(infoAsada));
+//        vistaAsada.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent next = new Intent(ASADAS.this, VistaASADAS.class);
+//                startActivity(next);
+//            }
+//        });
     }
 
     public void setDataList(){
