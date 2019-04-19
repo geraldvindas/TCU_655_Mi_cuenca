@@ -1,7 +1,6 @@
 package com.ucr.micuenca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
 import com.ucr.micuenca.BaseDeDatos.ASADA;
@@ -54,13 +52,13 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
 
     @Override
     public void onClick(String title) {
-//        RelativeLayout vistaAsada = findViewById(R.id(infoAsada));
-//        vistaAsada.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent next = new Intent(ASADAS.this, VistaASADAS.class);
-//                startActivity(next);
-//            }
-//        });
+        RelativeLayout vistaAsada = findViewById(R.id.infoAsada);
+        vistaAsada.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent next = new Intent(ASADAS.this, VistaASADAS.class);
+                startActivity(next);
+            }
+        });
     }
 
     public void setDataList(){
