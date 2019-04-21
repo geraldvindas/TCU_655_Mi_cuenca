@@ -73,15 +73,13 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
                 ++index;
             }
         }
-        String nombre;
-        String descripcion;
-        String actividad;
+
         Intent actividadHijo = new Intent(Zonificacion.this, VistaZonificacion.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
         actividadHijo.putExtra("descripcion", zonaList.get(index).getDescripcion());
         actividadHijo.putExtra("actividad", zonaList.get(index).getActividad());
         startActivity(actividadHijo);
-        
+
 
 
     }
@@ -89,4 +87,5 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
     public void setDataList(){
         temp.addAll(zonaList);
     }
+
 }
