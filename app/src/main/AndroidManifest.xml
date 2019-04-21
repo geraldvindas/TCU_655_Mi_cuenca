@@ -45,6 +45,7 @@
         <activity android:name=".Zonificacion" />
         <activity android:name=".Conceptos" />
         <activity android:name=".VistaASADAS"/>
+        <activity android:name=".VistaZonificacion"/>
     </application>
 
 </manifest>

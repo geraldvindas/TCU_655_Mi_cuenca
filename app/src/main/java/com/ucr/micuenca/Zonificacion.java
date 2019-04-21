@@ -22,6 +22,8 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
     private ListAdapter mListAdapter;
 
     private List<DatoGeneral> temp = new ArrayList<>();
+    private List<Zona> zonaList;
+    private Zona zona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +49,12 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
 
         mListAdapter = new ListAdapter(this);
         mRecyclerView.setAdapter(mListAdapter);
+
+        zona = new Zona();
+        zonaList = zona.getListaZona(getApplicationContext());
+
         setDataList();
         mListAdapter.setListData(temp);
-
-
 
     }
 
@@ -59,11 +63,30 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
         Context context = this;
         Toast.makeText(context, title, Toast.LENGTH_SHORT)
                 .show();
+
+        boolean encontrado = false;
+        int index = 0;
+        while (index < zonaList.size() && !encontrado){
+            if(zonaList.get(index).getTitulo().equals(title)){
+                encontrado = true;
+            }else{
+                ++index;
+            }
+        }
+        String nombre;
+        String descripcion;
+        String actividad;
+        Intent actividadHijo = new Intent(Zonificacion.this, VistaZonificacion.class);
+        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+        actividadHijo.putExtra("descripcion", zonaList.get(index).getDescripcion());
+        actividadHijo.putExtra("actividad", zonaList.get(index).getActividad());
+        startActivity(actividadHijo);
+        
+
+
     }
 
     public void setDataList(){
-        Zona zona = new Zona();
-        List<Zona> zonaList = zona.getListaZona(getApplicationContext());
         temp.addAll(zonaList);
     }
 }
