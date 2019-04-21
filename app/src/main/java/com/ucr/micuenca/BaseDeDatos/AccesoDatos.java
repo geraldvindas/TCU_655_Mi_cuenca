@@ -39,10 +39,21 @@ public class AccesoDatos {
     }
 
     public Cursor obtenerLista(String nombreTabla){
-        List<Ley> lista = new ArrayList<>();
         Cursor cursor = baseDatos.rawQuery("SELECT * FROM "+nombreTabla+";", null);
         return cursor;
     }
+
+    public Cursor obtenerListaPorId(String nombreTabla, String columnaBusqueda,String id){
+        String query ="SELECT * FROM "+nombreTabla+" WHERE "+ columnaBusqueda +" = \" "+id+ "\";";
+        Cursor cursor = baseDatos.rawQuery(query, null);
+        return cursor;
+    }
+
+    public Cursor obtenerEntidad(String query){
+        Cursor cursor = baseDatos.rawQuery(query, null);
+        return cursor;
+    }
+
 
 
 }

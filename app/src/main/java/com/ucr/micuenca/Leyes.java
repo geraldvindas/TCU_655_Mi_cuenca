@@ -51,8 +51,6 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
         setDataList();
         mListAdapter.setListData(temp);
 
-
-
      }
 
     @Override
@@ -60,6 +58,11 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
         Context context = this;
         Toast.makeText(context, title, Toast.LENGTH_SHORT)
                 .show();
+
+        Intent actividadHijo = new Intent(this, Articulos.class);
+        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+        startActivity(actividadHijo);
+
     }
 
     public void setDataList(){

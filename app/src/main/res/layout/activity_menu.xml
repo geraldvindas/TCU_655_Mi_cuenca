@@ -7,95 +7,145 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <FrameLayout android:id="@+id/fl_mapa"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/world" />
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/world"/>
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+
                 android:src="@drawable/circle" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="Mapa"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
 
         <FrameLayout android:id="@+id/fl_conceptos"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignLeft="@id/fl_mapa"
             android:layout_above="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/conceptos" />
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/circle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="Conceptos"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
 
         <FrameLayout android:id="@+id/fl_datos"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignBottom="@id/fl_mapa"
             android:layout_marginBottom="20dp"
             android:layout_toLeftOf="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/key" />
+                android:src="@drawable/key"
+                android:layout_marginLeft="10dp"
+                />
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+
                 android:src="@drawable/circle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="Datos curiosos"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
         <FrameLayout android:id="@+id/fl_asadas"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignBottom="@id/fl_mapa"
             android:layout_marginBottom="20dp"
             android:layout_toRightOf="@id/fl_mapa">
-            >
+
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/drop" />
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/circle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="ASADAS"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
 
         <FrameLayout android:id="@+id/fl_leyes"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="50dp"
             android:layout_alignStart="@id/fl_mapa"
             android:layout_below="@id/fl_mapa">
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/judge" />
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/circle" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="Leyes"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
         <FrameLayout android:id="@+id/fl_zonificacion"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginRight="50dp"
             android:layout_alignEnd="@id/fl_mapa"
 
@@ -103,11 +153,20 @@
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/zona" />
 
             <ImageView android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/circle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="80dp"
+                android:text="Zonificación"
+                android:textAlignment="center" />
 
         </FrameLayout>
 
