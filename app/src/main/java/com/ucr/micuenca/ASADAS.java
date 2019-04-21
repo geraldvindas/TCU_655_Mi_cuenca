@@ -22,6 +22,8 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
     private ListAdapter mListAdapter;
 
     private List<DatoGeneral> temp = new ArrayList<>();
+    private List<ASADA> asadaList;
+    private ASADA asada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,10 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
 
         mListAdapter = new ListAdapter(this);
         mRecyclerView.setAdapter(mListAdapter);
+
+        asada = new ASADA();
+        asadaList = asada.getListaASADA(getApplicationContext());
+
         setDataList();
         mListAdapter.setListData(temp);
 
@@ -57,11 +63,32 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
         Context context = this;
         Toast.makeText(context, title, Toast.LENGTH_SHORT)
                 .show();
+
+        boolean encontrado = false;
+        int index = 0;
+        while (index < asadaList.size() && !encontrado){
+            if(asadaList.get(index).getTitulo().equals(title)){
+                encontrado = true;
+            }else{
+                ++index;
+            }
+        }
+
+        Intent actividadHijo = new Intent(ASADAS.this, VistaASADAS.class);
+        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+        actividadHijo.putExtra("aguaConsumida", Integer.toString(asadaList.get(index).getAguaConsumida()));
+        actividadHijo.putExtra("constante", Integer.toString(asadaList.get(index).getConstante()));
+        actividadHijo.putExtra("anoInfraestructura", Integer.toString(asadaList.get(index).getAnoInfraestructura()));
+        actividadHijo.putExtra("anoCreacion", Integer.toString(asadaList.get(index).getAnoCreacion()));
+        actividadHijo.putExtra("cantTomas", Integer.toString(asadaList.get(index).getCantidadTomas()));
+        actividadHijo.putExtra("cantTuberias", Integer.toString(asadaList.get(index).getCantidadTuberias()));
+        actividadHijo.putExtra("cantTanques", Integer.toString(asadaList.get(index).getCantidadTanques()));
+        actividadHijo.putExtra("cantBeneficiados", Integer.toString(asadaList.get(index).getCantidadBeneficiados()));
+        actividadHijo.putExtra("subcuenca", asadaList.get(index).getNombreSubcuenca());
+        startActivity(actividadHijo);
     }
 
     public void setDataList(){
-        ASADA asada = new ASADA();
-        List<ASADA> asadaList = asada.getListaASADA(getApplicationContext());
         temp.addAll(asadaList);
     }
 }
