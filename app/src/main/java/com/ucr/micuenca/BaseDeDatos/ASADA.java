@@ -19,6 +19,7 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
     int cantidadBeneficiados;
     String nombreSubcuenca;
 
+
     public ASADA(String nombre, int aguaConsumida, int constante, int anoInfraestructura, int anoCreacion, int cantidadTomas, int cantidadTuberias, int cantidadTanques, int cantidadBeneficiados, String nombreSubcuenca) {
         this.nombre = nombre;
         this.aguaConsumida = aguaConsumida;
@@ -121,7 +122,11 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
 
     @Override
     public String getDescripcion() {
-        return nombreSubcuenca;
+        String myDescription = "Agua consumida: " + Integer.toString(this.aguaConsumida) + " l/hab/día, Año infraestructura: "
+                + Integer.toString(this.anoInfraestructura) + ", Cantidad de personas beneficiadas: "
+                + Integer.toString(this.cantidadBeneficiados) + ", Cantidad de Tanques: " + Integer.toString(this.cantidadTanques) +
+                ", Cantidad de tuberías: " + Integer.toString(this.cantidadTuberias);
+        return myDescription;
     }
 
     @Override
