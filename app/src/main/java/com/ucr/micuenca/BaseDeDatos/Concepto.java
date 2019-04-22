@@ -8,55 +8,55 @@ import java.util.Collections;
 import java.util.List;
 
 public class Concepto extends DatoGeneral implements Comparable<Concepto> {
-    String nombre;
-    String resumen;
-    String foto;
+    String nombreConcepto;
+    String resumenConcepto;
+    String fotoConcepto;
 
     public Concepto(String nombre, String resumen, String foto) {
-        this.nombre = nombre;
-        this.resumen = resumen;
-        this.foto = foto;
+        this.nombreConcepto = nombre;
+        this.resumenConcepto = resumen;
+        this.fotoConcepto = foto;
     }
 
     public Concepto(){}
 
     public Concepto(String nombre, String resumen){
-        this.nombre = nombre;
-        this.resumen = resumen;
+        this.nombreConcepto = nombre;
+        this.resumenConcepto = resumen;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreConcepto() {
+        return nombreConcepto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreConcepto(String nombre) {
+        this.nombreConcepto = nombre;
     }
 
-    public String getResumen() {
-        return resumen;
+    public String getResumenConcepto() {
+        return resumenConcepto;
     }
 
-    public void setResumen(String resumen) {
-        this.resumen = resumen;
+    public void setResumenConcepto(String resumen) {
+        this.resumenConcepto = resumen;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getFotoConcepto() {
+        return fotoConcepto;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setFotoConcepto(String foto) {
+        this.fotoConcepto = foto;
     }
 
     @Override
     public String getTitulo() {
-        return nombre;
+        return nombreConcepto;
     }
 
     @Override
     public String getDescripcion() {
-        return resumen;
+        return resumenConcepto;
     }
 
     @Override

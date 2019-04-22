@@ -23,6 +23,8 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
     private ListAdapter mListAdapter;
 
     private List<DatoGeneral> temp = new ArrayList<>();
+    private List<Concepto> conceptoList;
+    private Concepto concepto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,10 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
 
         mListAdapter = new ListAdapter(this);
         mRecyclerView.setAdapter(mListAdapter);
+
+        concepto = new Concepto();
+        conceptoList = concepto.getListaConcepto(getApplicationContext());
+
         setDataList();
         mListAdapter.setListData(temp);
 
@@ -60,11 +66,24 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
         Context context = this;
         Toast.makeText(context, title, Toast.LENGTH_SHORT)
                 .show();
+
+        boolean encontrado = false;
+        int index = 0;
+        while (index < conceptoList.size() && !encontrado){
+            if(conceptoList.get(index).getTitulo().equals(title)){
+                encontrado = true;
+            }else{
+                ++index;
+            }
+        }
+
+        Intent actividadHijo = new Intent(Conceptos.this, VistaConceptos.class);
+        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+        actividadHijo.putExtra("resumenConcepto", conceptoList.get(index).getResumenConcepto());
+        startActivity(actividadHijo);
     }
 
     public void setDataList(){
-        Concepto concepto = new Concepto();
-        List<Concepto> conceptoList = concepto.getListaConcepto(getApplicationContext());
         temp.addAll(conceptoList);
     }
 
