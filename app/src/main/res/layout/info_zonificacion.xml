@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/layout_descripcion"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="110dp"
         android:layout_below="@+id/titulo_menu"
         android:padding="10dp">
 
@@ -20,19 +20,21 @@
             android:id="@+id/text_descripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descripcion: " />
+            android:textSize="20dp"
+            android:text="Descripción: " />
 
         <TextView
             android:id="@+id/text_infoDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text=" " />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_actividad"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="110dp"
         android:layout_below="@+id/layout_descripcion"
         android:padding="10dp">
 
@@ -40,12 +42,14 @@
             android:id="@+id/text_actividad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Actividad: " />
 
         <TextView
             android:id="@+id/text_infoActividad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text=" " />
     </LinearLayout>
 
