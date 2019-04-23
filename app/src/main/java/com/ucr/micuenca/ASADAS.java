@@ -60,9 +60,6 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
 
     @Override
     public void onClick(String title) {
-        Context context = this;
-        Toast.makeText(context, title, Toast.LENGTH_SHORT)
-                .show();
 
         boolean encontrado = false;
         int index = 0;
@@ -77,7 +74,7 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
         Intent actividadHijo = new Intent(ASADAS.this, VistaASADAS.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
         actividadHijo.putExtra("aguaConsumida", Integer.toString(asadaList.get(index).getAguaConsumida()));
-        actividadHijo.putExtra("constante", Integer.toString(asadaList.get(index).getConstante()));
+        // actividadHijo.putExtra("constante", Integer.toString(asadaList.get(index).getConstante()));
         actividadHijo.putExtra("anoInfraestructura", Integer.toString(asadaList.get(index).getAnoInfraestructura()));
         actividadHijo.putExtra("anoCreacion", Integer.toString(asadaList.get(index).getAnoCreacion()));
         actividadHijo.putExtra("cantTomas", Integer.toString(asadaList.get(index).getCantidadTomas()));

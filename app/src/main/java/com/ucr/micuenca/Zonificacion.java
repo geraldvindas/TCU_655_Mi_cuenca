@@ -60,9 +60,6 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
 
     @Override
     public void onClick(String title) {
-        Context context = this;
-        Toast.makeText(context, title, Toast.LENGTH_SHORT)
-                .show();
 
         boolean encontrado = false;
         int index = 0;

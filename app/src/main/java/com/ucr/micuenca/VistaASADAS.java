@@ -34,9 +34,9 @@ public class VistaASADAS extends Activity {
         TextView aguaConsumida = findViewById(R.id.text_infoAguaConsumida);
         aguaConsumida.setText(dato_aguaConsumida + " l/hab/día");
 
-        String dato_constante = intentASADAS.getStringExtra("constante");
-        TextView constante = findViewById(R.id.text_infoConstante);
-        constante.setText(dato_constante);
+//        String dato_constante = intentASADAS.getStringExtra("constante");
+//        TextView constante = findViewById(R.id.text_infoConstante);
+//        constante.setText(dato_constante);
 
         String dato_anoInfraestructura = intentASADAS.getStringExtra("anoInfraestructura");
         TextView anoInfraestructura = findViewById(R.id.text_infoAnoInfraestructura);

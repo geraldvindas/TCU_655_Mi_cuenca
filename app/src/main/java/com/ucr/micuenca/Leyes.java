@@ -55,9 +55,6 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
 
     @Override
     public void onClick(String title) {
-        Context context = this;
-        Toast.makeText(context, title, Toast.LENGTH_SHORT)
-                .show();
 
         Intent actividadHijo = new Intent(this, Articulos.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
