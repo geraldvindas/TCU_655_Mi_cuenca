@@ -49,6 +49,7 @@
         <activity android:name=".VistaASADAS"/>
         <activity android:name=".VistaZonificacion"/>
         <activity android:name=".VistaConceptos"/>
+        <activity android:name=".DatosCuriosos"/>
     </application>
 
 </manifest>
