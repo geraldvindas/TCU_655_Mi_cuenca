@@ -60,9 +60,13 @@
         android:layout_below="@+id/layout_actividad"
         android:padding="25dp">
 
-        <android.support.v7.widget.AppCompatImageView
+
+        <ImageView
+            android:id="@+id/imageView_imgZona"
             android:layout_width="wrap_content"
-            android:layout_height="300dp" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/zonif_ejm" />
+
     </LinearLayout>
 
 

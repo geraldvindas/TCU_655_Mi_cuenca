@@ -11,18 +11,18 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
     String nombre;
     String descripcion;
     String actividad;
-    String imagen;
+//    String imagen;
 
-    public Zona(String nombre, String descripcion, String actividad, String imagen) {
+    public Zona(String nombre, String descripcion, String actividad/*, String imagen*/) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.actividad = actividad;
-//        if(StringUtils.compare(imagen,null) == 0) {
-        if(imagen != null){
-            this.imagen = imagen;
-        }else{
-            this.imagen = "zonifEjem.jpg";
-        }
+
+//        if(imagen != null){
+//            this.imagen = imagen;
+//        }else{
+//            this.imagen = "zonifEjem.jpg";
+//        }
     }
 
     public Zona() {
@@ -49,9 +49,10 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
         this.actividad = actividad;
     }
 
-    public String getImagen(){ return imagen; }
-
-    public void setImagen(String imagen){ this.imagen = imagen; }
+    //La idea es poder llamar a la imgen desde la BD a partir del nombre
+//    public String getImagen(){ return imagen; }
+//
+//    public void setImagen(String imagen){ this.imagen = imagen; }
 
     @Override
     public String getTitulo() {
@@ -75,7 +76,7 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
         Cursor cursor = accesoDatos.obtenerLista("Zona");
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            lista.add(new Zona(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3)));
+            lista.add(new Zona(cursor.getString(0), cursor.getString(1), cursor.getString(2)/*, cursor.getString(3)*/));
             cursor.moveToNext();
         }
         cursor.close();
