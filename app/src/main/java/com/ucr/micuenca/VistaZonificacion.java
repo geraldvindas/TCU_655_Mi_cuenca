@@ -37,6 +37,5 @@ public class VistaZonificacion extends Activity {
         String dato_actividad = intentZonificacion.getStringExtra("actividad");
         TextView actividad = findViewById(R.id.text_infoActividad);
         actividad.setText(dato_actividad);
-
     }
 }

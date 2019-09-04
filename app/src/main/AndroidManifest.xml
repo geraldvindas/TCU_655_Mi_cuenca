@@ -50,6 +50,7 @@
         <activity android:name=".VistaZonificacion"/>
         <activity android:name=".VistaConceptos"/>
         <activity android:name=".DatosCuriosos"/>
+        <activity android:name=".VistaArticulo" />
     </application>
 
 </manifest>

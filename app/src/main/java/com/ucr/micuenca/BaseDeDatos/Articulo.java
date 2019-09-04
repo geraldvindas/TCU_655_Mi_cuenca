@@ -11,6 +11,7 @@ public class Articulo extends DatoGeneral implements Comparable<Articulo>{
     String nombreLey;
     int numero;
     String descripcion;
+    private final static String TITLE = "Artículo";
 
     public Articulo(){}
 
@@ -37,7 +38,7 @@ public class Articulo extends DatoGeneral implements Comparable<Articulo>{
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return this.descripcion;
     }
 
     public void setDescripcion(String descripcion) {
@@ -51,7 +52,7 @@ public class Articulo extends DatoGeneral implements Comparable<Articulo>{
 
     @Override
     public String getTitulo() {
-        return this.descripcion;
+        return TITLE +" "+ this.numero;
     }
 
     public List<Articulo> getListaArticuloLey(Context context, String nombreLey){
