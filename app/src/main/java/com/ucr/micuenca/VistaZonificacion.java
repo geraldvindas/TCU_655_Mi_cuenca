@@ -21,7 +21,10 @@ public class VistaZonificacion extends Activity {
 
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText(textoRecibido);
+        titulo.setText("Zonificación");
+
+        TextView tituloZonificacion = findViewById(R.id.tv_titulo_zonificacion);
+        tituloZonificacion.setText(textoRecibido);
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
