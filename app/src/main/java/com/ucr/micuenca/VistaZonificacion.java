@@ -5,6 +5,7 @@ package com.ucr.micuenca;
         import android.os.Bundle;
         import android.support.v7.widget.RecyclerView;
         import android.view.View;
+        import android.widget.ImageView;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
 
@@ -40,5 +41,34 @@ public class VistaZonificacion extends Activity {
         String dato_actividad = intentZonificacion.getStringExtra("actividad");
         TextView actividad = findViewById(R.id.text_infoActividad);
         actividad.setText(dato_actividad);
+
+//        String dato_imagen = intentZonificacion.getStringExtra("imagen");
+//        ImageView imagen = findViewById(R.id.imageView_imgZona);
+//        imagen.setImageResource(R.drawable.dato_imagen);
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
