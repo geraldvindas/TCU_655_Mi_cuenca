@@ -44,7 +44,7 @@ public class AccesoDatos {
     }
 
     public Cursor obtenerListaPorId(String nombreTabla, String columnaBusqueda,String id){
-        String query ="SELECT * FROM "+nombreTabla+" WHERE "+ columnaBusqueda +" = \" "+id+ "\";";
+        String query ="SELECT * FROM "+nombreTabla+" WHERE "+ columnaBusqueda +" = \""+id+ "\";";
         Cursor cursor = baseDatos.rawQuery(query, null);
         return cursor;
     }

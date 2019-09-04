@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/infoAsada"
+<RelativeLayout
+    android:id="@+id/infoZonificacion"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,65 +10,84 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 
+
     <LinearLayout
-        android:id="@+id/layout_descripcion"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/titulo_menu"
-        android:padding="10dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/text_descripcion"
+            android:id="@+id/tv_titulo_zonificacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Descripción: " />
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Definicion zonificacion"
+            android:layout_margin="10dp"/>
 
-        <TextView
-            android:id="@+id/text_infoDescripcion"
+        <LinearLayout
+
+            android:id="@+id/layout_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/text_descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Descripción: " />
+
+            <TextView
+                android:id="@+id/text_infoDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_actividad"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_below="@+id/layout_descripcion"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_actividad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Actividad: " />
+
+            <TextView
+                android:id="@+id/text_infoActividad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_imagen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text=" " />
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/imageView_imgZona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zonif_ejm" />
+
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_actividad"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_below="@+id/layout_descripcion"
-        android:padding="10dp">
 
-        <TextView
-            android:id="@+id/text_actividad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Actividad: " />
-
-        <TextView
-            android:id="@+id/text_infoActividad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text=" " />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_imagen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_actividad"
-        android:padding="10dp">
-
-
-        <ImageView
-            android:id="@+id/imageView_imgZona"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/zonif_ejm" />
-
-    </LinearLayout>
 
 
 
