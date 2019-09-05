@@ -18,11 +18,11 @@ android:layout_height="match_parent">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:alpha="0.5"
-    android:src="@drawable/datos_curiosos_back"
-    />
+    android:src="@drawable/datos_curiosos_back" />
 
 
 <TextView
+    style="@style/TextViewDescription"
     android:id="@+id/texto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -31,12 +31,11 @@ android:layout_height="match_parent">
     android:text="TextView"
     android:textAlignment="center"
     android:textColor="@color/black"
-    android:textSize="30dp"
     android:textStyle="bold" />
 
 
 <Button
-
+    style="@style/TextViewNextButton"
     android:id="@+id/button10"
     android:layout_below="@+id/texto"
     android:layout_width="wrap_content"
@@ -44,10 +43,7 @@ android:layout_height="match_parent">
     android:layout_height="40dp"
     android:layout_gravity="bottom"
     android:background="@color/colorPrimary"
-    android:text="Siguente Dato"
-    android:textColor="@color/white"
-    android:textAlignment="center"
-    android:textSize="25dp"/>
+    android:text="Siguente Dato"/>
 
 
 </RelativeLayout>
