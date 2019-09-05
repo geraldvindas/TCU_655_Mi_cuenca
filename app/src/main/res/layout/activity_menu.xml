@@ -12,24 +12,17 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/world"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Mapa"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/mapa"/>
 
         </FrameLayout>
 
@@ -40,22 +33,17 @@
             android:layout_alignLeft="@id/fl_mapa"
             android:layout_above="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/conceptos" />
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Conceptos"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/conceptos"/>
 
         </FrameLayout>
 
@@ -67,24 +55,17 @@
             android:layout_marginBottom="20dp"
             android:layout_toLeftOf="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/key"
-                android:layout_marginLeft="10dp"
-                />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/key"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Datos curiosos"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/datos_curiosos"/>
 
         </FrameLayout>
 
@@ -96,22 +77,17 @@
             android:layout_toRightOf="@id/fl_mapa">
 
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/drop" />
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="ASADAS"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/asadas"/>
 
         </FrameLayout>
 
@@ -123,23 +99,18 @@
             android:layout_alignStart="@id/fl_mapa"
             android:layout_below="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/judge" />
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Leyes"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/leyes"/>
 
         </FrameLayout>
 
@@ -151,22 +122,17 @@
 
             android:layout_below="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/zona" />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/zona"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Zonificación"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/zonificacion"/>
 
         </FrameLayout>
 
