@@ -16,11 +16,11 @@ public class VistaConceptos extends Activity{
         setContentView(R.layout.info_conceptos);
 
         Intent intentConceptos = getIntent();
-        String textoRecibido = intentConceptos.getStringExtra(Intent.EXTRA_TEXT);
+        String textoRecibido = intentConceptos.getStringExtra(Intent.EXTRA_TEXT); //Aquí se obtiene nombre de concepto a mostrar
 
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText(textoRecibido);
+        titulo.setText("Definición concepto");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -28,6 +28,9 @@ public class VistaConceptos extends Activity{
                 startActivity(next);
             }
         });
+
+        TextView nombreConcepto = findViewById(R.id.tv_titulo_concepto);
+        nombreConcepto.setText(textoRecibido);
 
         String dato_resumenConcepto = intentConceptos.getStringExtra("resumenConcepto");
         TextView resumenConcepto= findViewById(R.id.text_infoResumenConcepto);
