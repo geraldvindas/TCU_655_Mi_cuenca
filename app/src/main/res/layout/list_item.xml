@@ -10,15 +10,11 @@
 
 
     <TextView
-        android:id="@+id/tv_item_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title #"
-        android:textColor="@color/magenta"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        style="@style/TextViewHeaderList"
+        android:id="@+id/tv_item_title"/>
 
     <TextView
+        style="@style/TextViewDescriptionList"
         android:id="@+id/tv_item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MiCuenca</string>
+    <string name="zonificacion">Zonificación</string>
+    <string name="leyes">Leyes</string>
+    <string name="asadas">ASADAS</string>
+    <string name="datos_curiosos">Datos curiosos</string>
+    <string name="conceptos">Conceptos</string>
+    <string name="mapa">Mapa</string>
 </resources>

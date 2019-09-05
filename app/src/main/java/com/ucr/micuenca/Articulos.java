@@ -41,7 +41,7 @@ public class Articulos extends Activity implements ListAdapter.ListAdapterOnClic
             this.idLey = intentLeyes.getStringExtra(Intent.EXTRA_TEXT);
 
             TextView titulo = findViewById(R.id.tv_titulo);
-            titulo.setText("Articulos " + this.idLey);
+            titulo.setText(this.idLey);
             //this.idLey = textoRecibido;
             RelativeLayout menu = findViewById(R.id.titulo_menu);
             menu.setOnClickListener(new View.OnClickListener() {
