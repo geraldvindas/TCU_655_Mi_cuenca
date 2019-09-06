@@ -21,7 +21,7 @@ public class VistaASADAS extends Activity {
 
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText("ASADA " + textoRecibido);
+        titulo.setText("ASADAS");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -29,6 +29,9 @@ public class VistaASADAS extends Activity {
                 startActivity(next);
             }
         });
+
+        TextView nombre_Asada = findViewById(R.id.tv_titulo_asada);
+        nombre_Asada.setText(textoRecibido);
 
         String dato_aguaConsumida = intentASADAS.getStringExtra("aguaConsumida");
         TextView aguaConsumida = findViewById(R.id.text_infoAguaConsumida);
