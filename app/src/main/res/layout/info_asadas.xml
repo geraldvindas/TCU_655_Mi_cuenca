@@ -9,7 +9,7 @@
         layout="@layout/titulo_menu"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="@drawable/rounded_corners"
+
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"/>
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
         android:layout_below="@+id/titulo_menu"
-        android:background="@drawable/rounded_corners"
+
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -42,7 +42,7 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:layout_below="@+id/layout_nombreAsada"
-    android:background="@drawable/rounded_corners"
+
     android:padding="10dp">
 
         <TextView
@@ -62,7 +62,6 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="50dp"-->
         <!--android:layout_below="@+id/layout_aguaConsumida"-->
-        <!--    android:background="@drawable/rounded_corners"-->
         <!--android:padding="10dp">-->
 
         <!--<TextView-->
@@ -84,7 +83,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_aguaConsumida"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -105,7 +103,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_anoInfraestructura"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -125,7 +122,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_anoCreacion"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -145,7 +141,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_cantidadTomas"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -165,7 +160,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_cantidadTuberias"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -185,7 +179,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_cantidadTanques"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
@@ -205,7 +198,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/layout_cantidadBeneficiados"
-        android:background="@drawable/rounded_corners"
         android:padding="10dp">
 
         <TextView
