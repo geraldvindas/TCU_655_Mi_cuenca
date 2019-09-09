@@ -2,8 +2,7 @@
 <RelativeLayout android:id="@+id/infoAsada"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/rounded_corners">
+    android:layout_height="match_parent">
 
     <include android:id="@+id/titulo_menu"
         layout="@layout/titulo_menu"
