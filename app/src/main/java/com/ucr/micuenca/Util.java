@@ -1,9 +1,7 @@
 package com.ucr.micuenca;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
-
-import com.ucr.micuenca.R;
+import androidx.core.content.ContextCompat;
 
 public class Util {
 

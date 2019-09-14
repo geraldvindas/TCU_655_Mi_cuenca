@@ -1,23 +1,16 @@
 package com.ucr.micuenca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ucr.micuenca.BaseDeDatos.Articulo;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
-import com.ucr.micuenca.Leyes;
-import com.ucr.micuenca.ListAdapter;
-import com.ucr.micuenca.Menu;
-import com.ucr.micuenca.R;
 
 import java.util.ArrayList;
 import java.util.List;
