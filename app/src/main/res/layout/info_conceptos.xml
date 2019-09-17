@@ -2,7 +2,8 @@
 <RelativeLayout android:id="@+id/infoConcepto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <include android:id="@+id/titulo_menu"
         layout="@layout/titulo_menu"
@@ -10,14 +11,14 @@
         android:layout_width="match_parent"/>
 
     <LinearLayout
+        android:id="@+id/linear_descripcion_concepto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
         android:layout_below="@+id/titulo_menu"
         android:background="@drawable/rounded_corners"
         android:orientation="vertical"
         android:padding="10dp">
-
         <TextView
             style="@style/TextViewHeader1"
             android:id="@+id/tv_titulo_concepto"
@@ -35,6 +36,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+        <ImageView
+            android:id="@+id/imageView_imgConcepto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zonif_ejm" />
     </LinearLayout>
 
 </RelativeLayout>
