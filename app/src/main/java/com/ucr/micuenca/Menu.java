@@ -101,5 +101,4 @@ public class Menu extends Activity {
                     .apply();
         }
     }
-
 }
