@@ -72,7 +72,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         DatoGeneral datoGeneral = temp.get(position);
         myViewHolder.mTitle.setTextColor(Util.getColor(position, context));
         myViewHolder.mTitle.setText(datoGeneral.getTitulo());
-        myViewHolder.mDescription.setText(Util.recortarTexto(datoGeneral.getDescripcion(), Util.TAMANO_DESCRIPCION_LISTA) + "...");
+        myViewHolder.mDescription.setText(Util.recortarTexto(datoGeneral.getDescripcion(), Util.TAMANO_DESCRIPCION_LISTA));
     }
 
 
