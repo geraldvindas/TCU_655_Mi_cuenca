@@ -1,6 +1,13 @@
 package com.ucr.micuenca.BaseDeDatos;
 
-public class Comunidad implements Comparable<Comunidad> {
+import android.content.Context;
+import android.database.Cursor;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Comunidad  implements Comparable<Comunidad> {
     String nombre;
     String distrito;
     String canton;
@@ -19,6 +26,8 @@ public class Comunidad implements Comparable<Comunidad> {
         this.historia = historia;
         this.nombreASADA = nombreASADA;
     }
+
+    public Comunidad(){}
 
     public String getNombre() {
         return nombre;
@@ -79,5 +88,24 @@ public class Comunidad implements Comparable<Comunidad> {
     @Override
     public int compareTo(Comunidad o) {
         return 0;
+    }
+
+    public List<Comunidad> getListaComunidad(Context context){
+        List<Comunidad> lista = new ArrayList<>();
+        AccesoDatos accesoDatos = AccesoDatos.getInstance(context);
+        accesoDatos.open();
+        Cursor cursor = accesoDatos.obtenerLista("Comunidad");
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            lista.add(new Comunidad(cursor.getString(0), cursor.getString(1), cursor.getString(2)
+                    , cursor.getInt(3), cursor.getInt(4), cursor.getString(5)
+                    , cursor.getString(6)
+                    ));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        accesoDatos.close();
+        Collections.sort(lista);
+        return lista;
     }
 }

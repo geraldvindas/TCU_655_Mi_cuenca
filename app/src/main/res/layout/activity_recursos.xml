@@ -45,7 +45,7 @@
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:padding="16dp"
-        android:text="Libros de Gestion comunitaria del agua"
+        android:text="Libros de Gestión comunitaria del agua"
         android:textSize="12sp"
         android:linksClickable="true"
         android:onClick="goToDescarga"

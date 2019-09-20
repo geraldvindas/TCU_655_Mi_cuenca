@@ -194,7 +194,65 @@
             android:text=" " />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layout_nombreComunidad"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_nombreSubcuenca"
+        android:padding="10dp">
 
+        <TextView
+            android:id="@+id/text_nombreComunidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comunidad: " />
+
+        <TextView
+            android:id="@+id/text_infoNombreComunidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_numeroHabitantes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_nombreComunidad"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/text_numeroHabitantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de habitantes: " />
+
+        <TextView
+            android:id="@+id/text_infoNumeroHabitantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_historia"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_numeroHabitantes"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/text_historia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de habitantes: " />
+
+        <TextView
+            android:id="@+id/text_infoHistoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+    </LinearLayout>
 
 
 
