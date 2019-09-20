@@ -16,10 +16,6 @@
                 style="@style/ImageViewMenu"
                 android:src="@drawable/world"/>
 
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
-
             <TextView
                 style="@style/TextViewMenu"
                 android:text="@string/mapa"/>
@@ -35,11 +31,7 @@
 
             <ImageView
                 style="@style/ImageViewMenu"
-                android:src="@drawable/conceptos" />
-
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
+                android:src="@drawable/concept" />
 
             <TextView
                 style="@style/TextViewMenu"
@@ -57,11 +49,9 @@
 
             <ImageView
                 style="@style/ImageViewMenu"
-                android:src="@drawable/key"/>
+                android:src="@drawable/idea"/>
 
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
+
 
             <TextView
                 style="@style/TextViewMenu"
@@ -79,11 +69,8 @@
 
             <ImageView
                 style="@style/ImageViewMenu"
-                android:src="@drawable/drop" />
+                android:src="@drawable/asada" />
 
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
 
             <TextView
                 style="@style/TextViewMenu"
@@ -101,11 +88,7 @@
 
             <ImageView
                 style="@style/ImageViewMenu"
-                android:src="@drawable/judge" />
-
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
+                android:src="@drawable/law" />
 
 
             <TextView
@@ -124,16 +107,38 @@
 
             <ImageView
                 style="@style/ImageViewMenu"
-                android:src="@drawable/zona"/>
+                android:src="@drawable/zoning"/>
 
-            <ImageView
-                style="@style/ImageViewMenu"
-                android:src="@drawable/circle" />
 
             <TextView
                 style="@style/TextViewMenu"
                 android:text="@string/zonificacion"/>
 
         </FrameLayout>
+
+
+    <FrameLayout android:id="@+id/fl_links"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignStart="@id/fl_asadas"
+        android:layout_below="@id/fl_leyes">
+
+        <ImageView
+            android:src="@drawable/links"
+            android:layout_marginStart="10dp"
+            android:layout_height="60dp"
+            android:layout_width="60dp"/>
+
+        <TextView
+            style="@style/TextViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="60dp"
+            android:text="@string/enlaces"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+    </FrameLayout>
 
 </RelativeLayout>
