@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_shape">
 
 
     <FrameLayout
@@ -24,12 +25,8 @@
 
     <TextView
         style="@style/TextViewMenuTitle"
-        android:id="@+id/tv_titulo"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"
-        android:layout_below="@id/bt_button"/>
+        android:id="@+id/tv_titulo"
+        android:textColor="@color/white"/>
 
 
 </RelativeLayout>
