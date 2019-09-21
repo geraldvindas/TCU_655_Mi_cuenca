@@ -73,7 +73,10 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
 
         Intent actividadHijo = new Intent(Conceptos.this, VistaConceptos.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
-        actividadHijo.putExtra("resumenConcepto", conceptoList.get(index).getResumenConcepto());
+        Concepto concepto = conceptoList.get(index);
+        actividadHijo.putExtra("resumenConcepto", concepto.getResumenConcepto());
+        actividadHijo.putExtra("descripcionConcepto", concepto.getDescripcion());
+        actividadHijo.putExtra("imagenConcepto", concepto.getFotoConcepto());
         startActivity(actividadHijo);
     }
 

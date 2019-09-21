@@ -13,7 +13,7 @@
     <LinearLayout
         android:id="@+id/linear_descripcion_concepto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginBottom="3dp"
         android:layout_below="@+id/titulo_menu"
         android:background="@drawable/rounded_corners"
@@ -34,13 +34,17 @@
             style="@style/TextViewDescription"
             android:id="@+id/text_infoResumenConcepto"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
 
         <ImageView
             android:id="@+id/imageView_imgConcepto"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/zonif_ejm" />
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="bottom|center"
+            />
     </LinearLayout>
 
 </RelativeLayout>
