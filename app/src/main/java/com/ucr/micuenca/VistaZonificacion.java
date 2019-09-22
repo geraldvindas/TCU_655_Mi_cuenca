@@ -46,7 +46,6 @@ public class VistaZonificacion extends Activity {
         ImageView imagen = findViewById(R.id.imageView_imgZona);
         imagen.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenZona));
 
-
     }
 }
 

@@ -22,11 +22,11 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
 
     public Zona() {}
 
-    public Zona(String nombre, String descripcion, String actividad) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.actividad = actividad;
-    }
+//    public Zona(String nombre, String descripcion, String actividad) {
+//        this.nombre = nombre;
+//        this.descripcion = descripcion;
+//        this.actividad = actividad;
+//    }
 
     public String getNombre() {
         return nombre;
@@ -49,7 +49,9 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
         this.actividad = actividad;
     }
 
-    public String getImagenZona(){ return imagen; }
+    public String getImagenZona(){
+        return "imagenes/" + imagen;
+    }
 
     public void setImagenZona(String imagen){ this.imagen = imagen; }
 
@@ -75,7 +77,7 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
         Cursor cursor = accesoDatos.obtenerLista("Zona");
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            lista.add(new Zona(cursor.getString(0), cursor.getString(1), cursor.getString(2)/*, cursor.getString(3)*/));
+            lista.add(new Zona(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3)));
             cursor.moveToNext();
         }
         cursor.close();
