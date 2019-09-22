@@ -32,7 +32,7 @@ android:layout_height="match_parent">
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:background="@drawable/rounded_corners"
+        android:background="@drawable/rounded_corners_yellow"
         android:textStyle="bold" />
 
     <FrameLayout
