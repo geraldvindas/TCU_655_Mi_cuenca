@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MiCuenca</string>
+    <string name="zonificacion">Zonificación</string>
+    <string name="leyes">Leyes</string>
+    <string name="asadas">ASADAS</string>
+    <string name="datos_curiosos">Datos curiosos</string>
+    <string name="conceptos">Conceptos</string>
+    <string name="mapa">Mapa</string>
+    <string name="world_cities_service">https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer</string>
+    <string name="world_cities_service1">https://www.arcgis.com/sharing/rest/content/items/453f5a7e73ba44c69090c150e3952dff/data</string>
+    <string name="enlaces">Enlaces</string>
 </resources>

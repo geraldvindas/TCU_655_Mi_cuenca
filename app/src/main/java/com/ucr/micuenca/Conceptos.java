@@ -1,17 +1,14 @@
 package com.ucr.micuenca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.ucr.micuenca.BaseDeDatos.AccesoDatos;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
 import com.ucr.micuenca.BaseDeDatos.Concepto;
 
@@ -76,7 +73,10 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
 
         Intent actividadHijo = new Intent(Conceptos.this, VistaConceptos.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
-        actividadHijo.putExtra("resumenConcepto", conceptoList.get(index).getResumenConcepto());
+        Concepto concepto = conceptoList.get(index);
+        actividadHijo.putExtra("resumenConcepto", concepto.getResumenConcepto());
+        actividadHijo.putExtra("descripcionConcepto", concepto.getDescripcion());
+        actividadHijo.putExtra("imagenConcepto", concepto.getFotoConcepto());
         startActivity(actividadHijo);
     }
 

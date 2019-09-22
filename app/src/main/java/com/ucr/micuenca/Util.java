@@ -1,26 +1,33 @@
 package com.ucr.micuenca;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import android.graphics.drawable.Drawable;
 
-import com.ucr.micuenca.R;
+import androidx.core.content.ContextCompat;
+
+import java.io.InputStream;
 
 public class Util {
 
-    public static final int TAMANO_DESCRIPCION_LISTA = 180;
+    public static final int TAMANO_DESCRIPCION_LISTA = 120;
+    public static final String URL_IMAGEN_DEFECTO = "imagenes/zonif_ejm.jpg";
+
     public static int getColor(int position, Context context){
         int module = position % 6;
+        module = 8;
         switch (module){
             case 0:
-                return ContextCompat.getColor(context, R.color.magentaOscuro);
+                return ContextCompat.getColor(context, R.color.color1);
             case 1:
-                return ContextCompat.getColor(context, R.color.orange);
+                return ContextCompat.getColor(context, R.color.color2);
             case 2:
-                return ContextCompat.getColor(context, R.color.red_orange);
+                return ContextCompat.getColor(context, R.color.color3);
             case 3:
-                return ContextCompat.getColor(context, R.color.black_blue);
+                return ContextCompat.getColor(context, R.color.color4);
             case 4:
-                return ContextCompat.getColor(context, R.color.magenta);
+                return ContextCompat.getColor(context, R.color.color5);
+                case 5:
+                return ContextCompat.getColor(context, R.color.colorSecundary);
             default:
                 return ContextCompat.getColor(context, R.color.black);
 
@@ -29,7 +36,19 @@ public class Util {
 
     public static String recortarTexto(String texto, int caracteres){
         if (texto.length() >= caracteres)
-            return texto.substring(0,caracteres);
+            return texto.substring(0,caracteres) + "...";
         return texto;
+    }
+
+    public static Drawable loadDrawableFromAssets(Context context, String path)
+    {
+        if(path == null){
+            path = URL_IMAGEN_DEFECTO;
+        }
+        try (InputStream stream = context.getAssets().open(path)) {
+            return Drawable.createFromStream(stream, null);
+        } catch (Exception ignored) {
+            return null;
+        }
     }
 }

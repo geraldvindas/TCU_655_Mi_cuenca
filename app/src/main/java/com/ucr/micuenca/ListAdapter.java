@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View.OnClickListener;
 
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
@@ -17,7 +17,7 @@ import java.util.List;
 
 
 /**
- * {@link android.support.v7.widget.RecyclerView}
+ * {@link RecyclerView}
  */
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
 
@@ -72,7 +72,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         DatoGeneral datoGeneral = temp.get(position);
         myViewHolder.mTitle.setTextColor(Util.getColor(position, context));
         myViewHolder.mTitle.setText(datoGeneral.getTitulo());
-        myViewHolder.mDescription.setText(Util.recortarTexto(datoGeneral.getDescripcion(), Util.TAMANO_DESCRIPCION_LISTA) + "...");
+        myViewHolder.mDescription.setText(Util.recortarTexto(datoGeneral.getDescripcion(), Util.TAMANO_DESCRIPCION_LISTA));
     }
 
 

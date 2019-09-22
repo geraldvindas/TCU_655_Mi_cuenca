@@ -12,24 +12,13 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
+            <ImageView
+                style="@style/ImageViewMenu"
                 android:src="@drawable/world"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-
-                android:src="@drawable/circle" />
-
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Mapa"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/mapa"/>
 
         </FrameLayout>
 
@@ -40,22 +29,13 @@
             android:layout_alignLeft="@id/fl_mapa"
             android:layout_above="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/conceptos" />
-
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/circle" />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/concept" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Conceptos"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/conceptos"/>
 
         </FrameLayout>
 
@@ -67,24 +47,15 @@
             android:layout_marginBottom="20dp"
             android:layout_toLeftOf="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/key"
-                android:layout_marginLeft="10dp"
-                />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/idea"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
 
-                android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Datos curiosos"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/datos_curiosos"/>
 
         </FrameLayout>
 
@@ -96,22 +67,14 @@
             android:layout_toRightOf="@id/fl_mapa">
 
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/drop" />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/asada" />
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="ASADAS"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/asadas"/>
 
         </FrameLayout>
 
@@ -123,23 +86,14 @@
             android:layout_alignStart="@id/fl_mapa"
             android:layout_below="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/judge" />
-
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/circle" />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/law" />
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Leyes"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/leyes"/>
 
         </FrameLayout>
 
@@ -151,23 +105,40 @@
 
             android:layout_below="@id/fl_mapa">
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/zona" />
+            <ImageView
+                style="@style/ImageViewMenu"
+                android:src="@drawable/zoning"/>
 
-            <ImageView android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/circle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="80dp"
-                android:text="Zonificación"
-                android:textAlignment="center" />
+                style="@style/TextViewMenu"
+                android:text="@string/zonificacion"/>
 
         </FrameLayout>
+
+
+    <FrameLayout android:id="@+id/fl_links"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignStart="@id/fl_asadas"
+        android:layout_below="@id/fl_leyes">
+
+        <ImageView
+            android:src="@drawable/links"
+            android:layout_marginStart="10dp"
+            android:layout_height="60dp"
+            android:layout_width="60dp"/>
+
+        <TextView
+            style="@style/TextViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="60dp"
+            android:text="@string/enlaces"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+    </FrameLayout>
 
 </RelativeLayout>

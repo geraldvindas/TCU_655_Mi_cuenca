@@ -3,9 +3,8 @@ package com.ucr.micuenca;
         import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
-        import android.support.v7.widget.RecyclerView;
+        import androidx.recyclerview.widget.RecyclerView;
         import android.view.View;
-        import android.widget.ImageView;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
 
@@ -22,7 +21,10 @@ public class VistaZonificacion extends Activity {
 
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText(textoRecibido);
+        titulo.setText("Zonificación");
+
+        TextView tituloZonificacion = findViewById(R.id.tv_titulo_zonificacion);
+        tituloZonificacion.setText(textoRecibido);
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
