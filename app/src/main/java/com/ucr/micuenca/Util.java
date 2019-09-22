@@ -1,14 +1,20 @@
 package com.ucr.micuenca;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+
 import androidx.core.content.ContextCompat;
+
+import java.io.InputStream;
 
 public class Util {
 
     public static final int TAMANO_DESCRIPCION_LISTA = 120;
+    public static final String URL_IMAGEN_DEFECTO = "imagenes/zonif_ejm.jpg";
+
     public static int getColor(int position, Context context){
         int module = position % 6;
-        module = 7;
+        module = 8;
         switch (module){
             case 0:
                 return ContextCompat.getColor(context, R.color.color1);
@@ -32,5 +38,17 @@ public class Util {
         if (texto.length() >= caracteres)
             return texto.substring(0,caracteres) + "...";
         return texto;
+    }
+
+    public static Drawable loadDrawableFromAssets(Context context, String path)
+    {
+        if(path == null){
+            path = URL_IMAGEN_DEFECTO;
+        }
+        try (InputStream stream = context.getAssets().open(path)) {
+            return Drawable.createFromStream(stream, null);
+        } catch (Exception ignored) {
+            return null;
+        }
     }
 }
