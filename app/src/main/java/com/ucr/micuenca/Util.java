@@ -14,7 +14,7 @@ public class Util {
 
     public static int getColor(int position, Context context){
         int module = position % 6;
-        module = 7;
+        module = 8;
         switch (module){
             case 0:
                 return ContextCompat.getColor(context, R.color.color1);
