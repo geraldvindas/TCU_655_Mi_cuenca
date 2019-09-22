@@ -54,8 +54,6 @@ public class Conceptos extends Activity implements ListAdapter.ListAdapterOnClic
         setDataList();
         mListAdapter.setListData(temp);
 
-
-
     }
 
     @Override

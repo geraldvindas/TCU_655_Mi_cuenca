@@ -7,6 +7,7 @@ package com.ucr.micuenca;
         import android.view.View;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
+        import android.widget.ImageView;
 
 public class VistaZonificacion extends Activity {
 
@@ -41,9 +42,9 @@ public class VistaZonificacion extends Activity {
         TextView actividad = findViewById(R.id.text_infoActividad);
         actividad.setText(dato_actividad);
 
-//        String dato_imagen = intentZonificacion.getStringExtra("imagen");
-//        ImageView imagen = findViewById(R.id.imageView_imgZona);
-//        imagen.setImageResource(R.drawable.dato_imagen);
+        String dato_imagenZona = intentZonificacion.getStringExtra("imagen");
+        ImageView imagen = findViewById(R.id.imageView_imgZona);
+        imagen.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenZona));
 
 
     }

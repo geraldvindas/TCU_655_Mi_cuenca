@@ -31,7 +31,7 @@
 
             android:id="@+id/layout_descripcion"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:padding="10dp">
             <TextView
                 style="@style/TextViewHeader2"
@@ -48,7 +48,7 @@
         <LinearLayout
             android:id="@+id/layout_actividad"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/layout_descripcion"
             android:padding="10dp">
 
@@ -73,9 +73,11 @@
 
             <ImageView
                 android:id="@+id/imageView_imgZona"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/zonif_ejm" />
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="bottom|center"/>
 
         </LinearLayout>
     </LinearLayout>
