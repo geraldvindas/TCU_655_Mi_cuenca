@@ -18,9 +18,10 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
     int cantidadTanques;
     int cantidadBeneficiados;
     String nombreSubcuenca;
+    String imagen;
 
 
-    public ASADA(String nombre, int aguaConsumida, int constante, int anoInfraestructura, int anoCreacion, int cantidadTomas, int cantidadTuberias, int cantidadTanques, int cantidadBeneficiados, String nombreSubcuenca) {
+    public ASADA(String nombre, int aguaConsumida, int constante, int anoInfraestructura, int anoCreacion, int cantidadTomas, int cantidadTuberias, int cantidadTanques, int cantidadBeneficiados, String nombreSubcuenca, String nombreImagen) {
         this.nombre = nombre;
         this.aguaConsumida = aguaConsumida;
         this.constante = constante;
@@ -31,6 +32,7 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
         this.cantidadTanques = cantidadTanques;
         this.cantidadBeneficiados = cantidadBeneficiados;
         this.nombreSubcuenca = nombreSubcuenca;
+        this.imagen = nombreImagen;
     }
 
     public ASADA() {}
@@ -115,6 +117,10 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
         this.nombreSubcuenca = nombreSubcuenca;
     }
 
+    public String getImagen() {
+        return nombre;
+    }
+
     @Override
     public String getTitulo() {
         return nombre;
@@ -145,6 +151,7 @@ public class ASADA extends DatoGeneral implements Comparable<ASADA> {
                     , cursor.getInt(3), cursor.getInt(4), cursor.getInt(5)
                     , cursor.getInt(6), cursor.getInt(7), cursor.getInt(8)
                     , cursor.getString(9)
+                    ,cursor.getString(10)
             ));
             cursor.moveToNext();
         }
