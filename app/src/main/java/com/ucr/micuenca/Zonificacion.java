@@ -73,10 +73,8 @@ public class Zonificacion extends Activity implements ListAdapter.ListAdapterOnC
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
         actividadHijo.putExtra("descripcion", zonaList.get(index).getDescripcion());
         actividadHijo.putExtra("actividad", zonaList.get(index).getActividad());
-//        actividadHijo.putExtra("imagen", zonaList.get(index).getImagen());
+        actividadHijo.putExtra("imagen", zonaList.get(index).getImagenZona());
         startActivity(actividadHijo);
-
-
 
     }
 
