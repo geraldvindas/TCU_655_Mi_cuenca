@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
 <RelativeLayout
     android:id="@+id/infoZonificacion"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -9,7 +15,6 @@
         layout="@layout/titulo_menu"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +36,7 @@
 
             android:id="@+id/layout_descripcion"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:padding="10dp">
             <TextView
                 style="@style/TextViewHeader2"
@@ -48,7 +53,7 @@
         <LinearLayout
             android:id="@+id/layout_actividad"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/layout_descripcion"
             android:padding="10dp">
 
@@ -68,20 +73,19 @@
             android:id="@+id/layout_imagen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:padding="10dp">
-
 
             <ImageView
                 android:id="@+id/imageView_imgZona"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/zonif_ejm" />
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="bottom|center"/>
 
         </LinearLayout>
     </LinearLayout>
 
-
-
-
-
 </RelativeLayout>
+</ScrollView>

@@ -3,11 +3,13 @@ package com.ucr.micuenca;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.ucr.micuenca.Menu;
+import com.ucr.micuenca.R;
+import com.ucr.micuenca.Util;
 
 public class VistaConceptos extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
