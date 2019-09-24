@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00c0f3</color>
+    <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#005da4</color>
+    <color name="colorSecundary">#424242</color>
     <color name="colorAccent">#ffe06a</color>
     <color name="colorAccent2">#efb810</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="gray">#EEEEEE</color>
     <color name="magenta">#13AAB4</color>
-    <color name="magentaOscuro">#267FA6</color>
+    <color name="color1">#25CED1</color>
+    <color name="color2">#FF4365</color>
+    <color name="color3">#FFBA49</color>
+    <color name="color4">#00D9C0</color>
+    <color name="color5">#7AC74F</color>
+    <color name="menuColor">#2196F3</color>
+    <color name="list">#00838F</color>
     <color name="orange">#F29420</color>
     <color name="red_orange">#AF4234</color>
     <color name="black_blue">#25455E</color>

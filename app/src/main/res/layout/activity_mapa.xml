@@ -10,7 +10,6 @@
         android:layout_width="match_parent"/>
 
     <com.esri.arcgisruntime.mapping.view.MapView
-
         android:id="@+id/mv_map_view"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
