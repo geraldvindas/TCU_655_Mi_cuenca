@@ -261,14 +261,14 @@
     <LinearLayout
         android:id="@+id/layout_historia"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/layout_numeroHabitantes"
         android:padding="10dp">
 
         <TextView
             style="@style/TextViewHeader2"
             android:id="@+id/text_historia"
-            android:text="Número de habitantes: " />
+            android:text="Historia: " />
 
         <TextView
             android:id="@+id/text_infoHistoria"

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ucr.micuenca.BaseDeDatos.Comunidad;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
 import com.ucr.micuenca.BaseDeDatos.ASADA;
 
@@ -22,8 +21,6 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
 
     private List<DatoGeneral> temp = new ArrayList<>();
     private List<ASADA> asadaList;
-    private List<Comunidad> comunidadList;
-    private Comunidad comunidad;
     private ASADA asada;
 
     @Override
@@ -52,8 +49,6 @@ public class ASADAS extends Activity implements ListAdapter.ListAdapterOnClickHa
         mRecyclerView.setAdapter(mListAdapter);
 
         asada = new ASADA();
-        comunidad = new Comunidad();
-        comunidadList = comunidad.getListaComunidad(getApplicationContext());
         asadaList = asada.getListaASADA(getApplicationContext());
 
         setDataList();
