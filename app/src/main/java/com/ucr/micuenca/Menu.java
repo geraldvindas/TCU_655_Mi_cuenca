@@ -27,6 +27,7 @@ public class Menu extends Activity {
         FrameLayout zonificacion = findViewById(R.id.fl_zonificacion);
         FrameLayout datos = findViewById(R.id.fl_datos);
         final FrameLayout leyes = findViewById(R.id.fl_leyes);
+        FrameLayout recursos = findViewById(R.id.fl_recursos);
         mapa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent next = new Intent(Menu.this, Mapa.class);
@@ -73,6 +74,13 @@ public class Menu extends Activity {
         conceptos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent next = new Intent(Menu.this, Conceptos.class);
+                startActivity(next);
+            }
+        });
+
+        recursos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent next = new Intent(Menu.this, Recursos.class);
                 startActivity(next);
             }
         });
