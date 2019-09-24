@@ -116,34 +116,36 @@
 
         </FrameLayout>
 
+<!--    <FrameLayout android:id="@+id/fl_recursos"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginLeft="130dp"-->
+<!--        android:layout_marginVertical="130dp"-->
+<!--        android:layout_alignStart="@id/fl_mapa"-->
+<!--        android:layout_below="@id/fl_mapa">-->
+
+<!--        <ImageView android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:src="@drawable/wifi" />-->
+
+<!--        <ImageView android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:src="@drawable/circle" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:paddingTop="30dp"-->
+<!--            android:text="Recursos"-->
+<!--            android:textAlignment="center" />-->
+<!--   </FrameLayout>-->
+
+
+<!--    <FrameLayout android:id="@+id/fl_links"-->
+
     <FrameLayout android:id="@+id/fl_recursos"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginVertical="130dp"
-        android:layout_alignStart="@id/fl_mapa"
-        android:layout_below="@id/fl_mapa">
-
-        <ImageView android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/wifi" />
-
-        <ImageView android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/circle" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="30dp"
-            android:text="Recursos"
-            android:textAlignment="center" />
-   </FrameLayout>
-
-
-    <FrameLayout android:id="@+id/fl_links"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
