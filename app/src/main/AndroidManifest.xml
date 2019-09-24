@@ -45,12 +45,12 @@
         <activity android:name=".Zonificacion" />
         <activity android:name=".Conceptos" />
         <activity android:name=".Articulos" />
-        <activity android:name=".ActividadArticulo" />
         <activity android:name=".VistaASADAS"/>
         <activity android:name=".VistaZonificacion"/>
         <activity android:name=".VistaConceptos"/>
         <activity android:name=".DatosCuriosos"/>
         <activity android:name=".Recursos" />
+        <activity android:name=".VistaArticulo" />
     </application>
 
 </manifest>

@@ -3,11 +3,11 @@ package com.ucr.micuenca;
         import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
-        import android.support.v7.widget.RecyclerView;
+        import androidx.recyclerview.widget.RecyclerView;
         import android.view.View;
-        import android.widget.ImageView;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
+        import android.widget.ImageView;
 
 public class VistaZonificacion extends Activity {
 
@@ -22,7 +22,10 @@ public class VistaZonificacion extends Activity {
 
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText(textoRecibido);
+        titulo.setText("Zonificación");
+
+        TextView tituloZonificacion = findViewById(R.id.tv_titulo_zonificacion);
+        tituloZonificacion.setText(textoRecibido);
         RelativeLayout menu = findViewById(R.id.titulo_menu);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -39,10 +42,9 @@ public class VistaZonificacion extends Activity {
         TextView actividad = findViewById(R.id.text_infoActividad);
         actividad.setText(dato_actividad);
 
-//        String dato_imagen = intentZonificacion.getStringExtra("imagen");
-//        ImageView imagen = findViewById(R.id.imageView_imgZona);
-//        imagen.setImageResource(R.drawable.dato_imagen);
-
+        String dato_imagenZona = intentZonificacion.getStringExtra("imagen");
+        ImageView imagen = findViewById(R.id.imageView_imgZona);
+        imagen.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenZona));
 
     }
 }

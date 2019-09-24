@@ -1,28 +1,21 @@
 package com.ucr.micuenca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ucr.micuenca.BaseDeDatos.Articulo;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
-import com.ucr.micuenca.Leyes;
-import com.ucr.micuenca.ListAdapter;
-import com.ucr.micuenca.Menu;
-import com.ucr.micuenca.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Articulos extends AppCompatActivity implements ListAdapter.ListAdapterOnClickHandler {
+public class Articulos extends Activity implements ListAdapter.ListAdapterOnClickHandler {
     private RecyclerView mRecyclerView;
     private ListAdapter mListAdapter;
     private String idLey;
@@ -38,10 +31,10 @@ public class Articulos extends AppCompatActivity implements ListAdapter.ListAdap
 
         Intent intentLeyes = getIntent();
         if( intentLeyes.hasExtra(Intent.EXTRA_TEXT)){
-            String textoRecibido = intentLeyes.getStringExtra(Intent.EXTRA_TEXT);
+            this.idLey = intentLeyes.getStringExtra(Intent.EXTRA_TEXT);
 
             TextView titulo = findViewById(R.id.tv_titulo);
-            titulo.setText("Articulos "+textoRecibido);
+            titulo.setText(this.idLey);
             //this.idLey = textoRecibido;
             RelativeLayout menu = findViewById(R.id.titulo_menu);
             menu.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +53,7 @@ public class Articulos extends AppCompatActivity implements ListAdapter.ListAdap
 
             mListAdapter = new ListAdapter(this);
             mRecyclerView.setAdapter(mListAdapter);
-            setDataList(textoRecibido);
+            setDataList(this.idLey);
             mListAdapter.setListData(temp);
         }
 
@@ -68,17 +61,28 @@ public class Articulos extends AppCompatActivity implements ListAdapter.ListAdap
 
     @Override
     public void onClick(String title) {
-        Intent actividadHijo = new Intent(this, Articulos.class);
-        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
-        ArrayList<String> datos = new ArrayList<>();
-        datos.add(title);
-        datos.add(this.idLey);
-        actividadHijo.putStringArrayListExtra("Datos",datos);
-        startActivity(actividadHijo);
+        boolean encontrado = false;
+        int index = 0;
+        while (index < this.temp.size() && !encontrado){
+            if(temp.get(index).getTitulo().equals(title)){
+                encontrado = true;
+            }else{
+                ++index;
+            }
+        }
+        if(encontrado) {
+            Intent actividadHijo = new Intent(Articulos.this, VistaArticulo.class);
+            actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+            actividadHijo.putExtra("idLey", this.idLey);
+            actividadHijo.putExtra("descripcion", temp.get(index).getDescripcion());
+            startActivity(actividadHijo);
+        }
+
     }
 
     public void setDataList(String nombreLey){
         Articulo articulo = new Articulo();
+        this.temp.clear();
         List<Articulo> leyList = articulo.getListaArticuloLey(getApplicationContext(), nombreLey);
         temp.addAll(leyList);
     }

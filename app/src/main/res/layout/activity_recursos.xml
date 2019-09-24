@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -22,8 +21,9 @@
         android:text="Página de Facebook"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToFacebook"
-        android:drawableLeft="@drawable/facebook" />
+        android:onClick="goToFacebook"/>
+<!--        android:drawableLeft="@drawable/facebook" -->
+        />
 
     <Button
         android:id="@+id/youtube"
@@ -35,8 +35,9 @@
         android:text="Video"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToYoutube"
-        android:drawableLeft="@drawable/youtube" />
+        android:onClick="goToYoutube"/>
+<!--        android:drawableLeft="@drawable/youtube" -->
+
 
     <Button
         android:id="@+id/descargar"
@@ -48,8 +49,9 @@
         android:text="Libros de Gestión comunitaria del agua"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToDescarga"
-        android:drawableLeft="@drawable/descargar" />
+        android:onClick="goToDescarga"/>
+<!--        android:drawableLeft="@drawable/descargar"-->
+
 
 
 </LinearLayout>

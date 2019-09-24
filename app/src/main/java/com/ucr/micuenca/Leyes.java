@@ -1,17 +1,14 @@
 package com.ucr.micuenca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.ucr.micuenca.BaseDeDatos.AccesoDatos;
 import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
 import com.ucr.micuenca.BaseDeDatos.Ley;
 
@@ -55,11 +52,9 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
 
     @Override
     public void onClick(String title) {
-
-        Intent actividadHijo = new Intent(this, Articulos.class);
+        Intent actividadHijo = new Intent(Leyes.this, Articulos.class);
         actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
         startActivity(actividadHijo);
-
     }
 
     public void setDataList(){
