@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ucr.micuenca.BaseDeDatos.Comunidad;
+import com.ucr.micuenca.BaseDeDatos.ImagenASADA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,9 @@ public class VistaASADAS extends Activity {
 
     private RecyclerView mRecyclerView;
     private List<Comunidad> comunidadList;
+    private List<ImagenASADA> imagenAsadaList;
     private Comunidad comunidad;
+    private ImagenASADA imagenASADA;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,13 +33,26 @@ public class VistaASADAS extends Activity {
         comunidad = new Comunidad();
         comunidadList = comunidad.getListaComunidad(getApplicationContext());
 
+        imagenASADA = new ImagenASADA();
+        imagenAsadaList = imagenASADA.getListaImagenAsada(getApplicationContext());
+
         boolean encontrado = false;
+        boolean encontradoImagen = false;
         int index = 0;
+        int indexImagen = 0;
         while (index < comunidadList.size() && !encontrado){
             if(comunidadList.get(index).getNombreASADA().equals(textoRecibido)){
                 encontrado = true;
             }else{
                 ++index;
+            }
+        }
+
+        while (indexImagen < imagenAsadaList.size() && !encontradoImagen){
+            if(imagenAsadaList.get(indexImagen).getNombreASADA().equals(textoRecibido)){
+                encontradoImagen = true;
+            }else{
+                ++indexImagen;
             }
         }
 
@@ -100,6 +117,12 @@ public class VistaASADAS extends Activity {
             String dato_historia = comunidadList.get(index).getHistoria();
             TextView historia = findViewById(R.id.text_infoHistoria);
             historia.setText(dato_historia);
+        }
+
+        if(encontradoImagen){
+            String dato_imagenASADA = imagenAsadaList.get(indexImagen).getImagen();
+            ImageView imagen = findViewById(R.id.imageView_imagenASADA);
+            imagen.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenASADA));
         }
 
     }

@@ -277,6 +277,24 @@
                 android:text=" " />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layout_imagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_historia"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageView_imagenASADA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="bottom|center"/>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </ScrollView>
