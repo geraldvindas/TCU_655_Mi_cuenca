@@ -34,7 +34,7 @@ public class Recursos extends Activity{
     }
 
     public void goToDescarga (View view) {
-        goToUrl ( "https://accionsocial.ucr.ac.cr/noticias/tcu-presenta-resultados-del-diagnostico-de-la-sub-cuenca-del-rio-coto");
+        goToUrl ( "https://mega.nz/#F!BxR31S4B!ilbE-0BVa8QMk1tgk2cNHA");
     }
 
     public void goToUrl (String url) {

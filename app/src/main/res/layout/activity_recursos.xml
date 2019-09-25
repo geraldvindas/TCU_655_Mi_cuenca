@@ -21,9 +21,8 @@
         android:text="Página de Facebook"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToFacebook"/>
-<!--        android:drawableLeft="@drawable/facebook" -->
-        />
+        android:onClick="goToFacebook"
+        android:drawableLeft="@drawable/facebook"/>
 
     <Button
         android:id="@+id/youtube"
@@ -35,8 +34,8 @@
         android:text="Video"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToYoutube"/>
-<!--        android:drawableLeft="@drawable/youtube" -->
+        android:onClick="goToYoutube"
+        android:drawableLeft="@drawable/youtube"/>
 
 
     <Button
@@ -49,8 +48,8 @@
         android:text="Libros de Gestión comunitaria del agua"
         android:textSize="12sp"
         android:linksClickable="true"
-        android:onClick="goToDescarga"/>
-<!--        android:drawableLeft="@drawable/descargar"-->
+        android:onClick="goToDescarga"
+        android:drawableLeft="@drawable/descargar"/>
 
 
 
