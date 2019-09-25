@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/titulo_menu"
+        layout="@layout/titulo_menu"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:padding="16dp"
+        android:text="Página de Facebook"
+        android:textSize="12sp"
+        android:linksClickable="true"
+        android:onClick="goToFacebook"
+        android:drawableLeft="@drawable/facebook"/>
+
+    <Button
+        android:id="@+id/youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:padding="16dp"
+        android:text="Video"
+        android:textSize="12sp"
+        android:linksClickable="true"
+        android:onClick="goToYoutube"
+        android:drawableLeft="@drawable/youtube"/>
+
+
+    <Button
+        android:id="@+id/descargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:padding="16dp"
+        android:text="Libros de Gestión comunitaria del agua"
+        android:textSize="12sp"
+        android:linksClickable="true"
+        android:onClick="goToDescarga"
+        android:drawableLeft="@drawable/descargar"/>
+
+
+
+</LinearLayout>

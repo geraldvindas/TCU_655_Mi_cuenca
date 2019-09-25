@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/infoAsada"
+
+
+    <RelativeLayout android:id="@+id/infoAsada"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -216,23 +217,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/layout_imagen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/layout_nombreComunidad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_below="@+id/layout_nombreSubcuenca"
             android:padding="10dp">
 
+            <TextView
+                style="@style/TextViewHeader2"
+                android:id="@+id/text_nombreComunidad"
 
-            <ImageView
-                android:id="@+id/imageView_imgASADA"
-                android:layout_width="match_parent"
+                android:text="Comunidad: " />
+
+            <TextView
+                android:id="@+id/text_infoNombreComunidad"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="bottom|center"/>
+                android:text=" " />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layout_numeroHabitantes"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/layout_nombreComunidad"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/TextViewHeader2"
+                android:id="@+id/text_numeroHabitantes"
+
+                android:text="Número de habitantes: " />
+
+            <TextView
+                android:id="@+id/text_infoNumeroHabitantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_historia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_numeroHabitantes"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/TextViewHeader2"
+                android:id="@+id/text_historia"
+                android:text="Historia: " />
+
+            <TextView
+                android:id="@+id/text_infoHistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" " />
         </LinearLayout>
 
     </RelativeLayout>
+
 </ScrollView>
