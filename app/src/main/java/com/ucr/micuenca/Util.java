@@ -5,12 +5,14 @@ import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 public class Util {
 
     public static final int TAMANO_DESCRIPCION_LISTA = 120;
     public static final String URL_IMAGEN_DEFECTO = "imagenes/zonif_ejm.jpg";
+    public static final String URL_IMAGENES_CONCEPTO = "imagenes/conceptos/";
 
     public static int getColor(int position, Context context){
         int module = position % 6;
@@ -42,13 +44,17 @@ public class Util {
 
     public static Drawable loadDrawableFromAssets(Context context, String path)
     {
-        if(path == null){
-            path = URL_IMAGEN_DEFECTO;
-        }
-        try (InputStream stream = context.getAssets().open(path)) {
+        try {
+            InputStream stream = context.getAssets().open(URL_IMAGENES_CONCEPTO + path);
             return Drawable.createFromStream(stream, null);
         } catch (Exception ignored) {
-            return null;
+            InputStream stream = null;
+            try {
+                stream = context.getAssets().open(URL_IMAGEN_DEFECTO);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return Drawable.createFromStream(stream, null);
         }
     }
 }

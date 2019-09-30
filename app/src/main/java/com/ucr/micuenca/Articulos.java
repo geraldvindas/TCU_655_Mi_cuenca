@@ -15,23 +15,25 @@ import com.ucr.micuenca.BaseDeDatos.DatoGeneral;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Articulos extends Activity implements ListAdapter.ListAdapterOnClickHandler {
+public class Articulos extends Activity implements ListAdapterArticulo.ListAdapterArticuloOnClickHandler {
     private RecyclerView mRecyclerView;
-    private ListAdapter mListAdapter;
+    private ListAdapterArticulo mListAdapter;
     private String idLey;
+    private String resumenLey;
 
     private List<DatoGeneral> temp = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista);
+        setContentView(R.layout.activity_lista_resumen);
 
 
 
         Intent intentLeyes = getIntent();
         if( intentLeyes.hasExtra(Intent.EXTRA_TEXT)){
             this.idLey = intentLeyes.getStringExtra(Intent.EXTRA_TEXT);
+            this.resumenLey = intentLeyes.getStringExtra("resumenLey");
 
             TextView titulo = findViewById(R.id.tv_titulo);
             titulo.setText(this.idLey);
@@ -44,14 +46,20 @@ public class Articulos extends Activity implements ListAdapter.ListAdapterOnClic
                 }
             });
 
-            mRecyclerView = (RecyclerView) findViewById(R.id.rv_list_item);
+            if(this.resumenLey != null){
+                TextView resumenLey = findViewById(R.id.tv_resumen_ley);
+                resumenLey.setText(this.resumenLey);
+            }
+
+
+            mRecyclerView = (RecyclerView) findViewById(R.id.rv_list_item_articulo);
 
             RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
             mRecyclerView.setLayoutManager(linearLayoutManager);
 
             mRecyclerView.setHasFixedSize(true);
 
-            mListAdapter = new ListAdapter(this);
+            mListAdapter = new ListAdapterArticulo(this);
             mRecyclerView.setAdapter(mListAdapter);
             setDataList(this.idLey);
             mListAdapter.setListData(temp);

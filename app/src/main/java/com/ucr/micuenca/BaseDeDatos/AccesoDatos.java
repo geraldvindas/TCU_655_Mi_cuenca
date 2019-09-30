@@ -39,12 +39,12 @@ public class AccesoDatos {
     }
 
     public Cursor obtenerLista(String nombreTabla){
-        Cursor cursor = baseDatos.rawQuery("SELECT * FROM "+nombreTabla+";", null);
+        Cursor cursor = baseDatos.rawQuery("SELECT * FROM " + nombreTabla + ";", null);
         return cursor;
     }
 
-    public Cursor obtenerListaPorId(String nombreTabla, String columnaBusqueda,String id){
-        String query ="SELECT * FROM "+nombreTabla+" WHERE "+ columnaBusqueda +" = \""+id+ "\";";
+    public Cursor obtenerListaPorId(String nombreTabla, String columnaBusqueda, String id){
+        String query ="SELECT * FROM " + nombreTabla + " WHERE "+ columnaBusqueda +" = '"+id+ "';";
         Cursor cursor = baseDatos.rawQuery(query, null);
         return cursor;
     }

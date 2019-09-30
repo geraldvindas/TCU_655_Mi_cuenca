@@ -20,11 +20,6 @@ public class Concepto extends DatoGeneral implements Comparable<Concepto> {
 
     public Concepto(){}
 
-    public Concepto(String nombre, String resumen){
-        this.nombreConcepto = nombre;
-        this.resumenConcepto = resumen;
-    }
-
     public String getNombreConcepto() {
         return nombreConcepto;
     }
@@ -71,7 +66,7 @@ public class Concepto extends DatoGeneral implements Comparable<Concepto> {
         Cursor cursor = accesoDatos.obtenerLista("Concepto");
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            lista.add(new Concepto(cursor.getString(0), cursor.getString(1)));
+            lista.add(new Concepto(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
             cursor.moveToNext();
         }
         cursor.close();
