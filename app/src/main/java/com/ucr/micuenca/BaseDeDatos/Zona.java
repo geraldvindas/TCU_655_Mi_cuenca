@@ -50,7 +50,7 @@ public class Zona extends DatoGeneral implements Comparable<Zona>{
     }
 
     public String getImagenZona(){
-        return "imagenes/" + imagen;
+        return "imagenes/imagenesZonas/" + imagen;
     }
 
     public void setImagenZona(String imagen){ this.imagen = imagen; }
