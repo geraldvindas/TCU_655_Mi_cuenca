@@ -52,9 +52,26 @@ public class Leyes extends Activity implements ListAdapter.ListAdapterOnClickHan
 
     @Override
     public void onClick(String title) {
-        Intent actividadHijo = new Intent(Leyes.this, Articulos.class);
-        actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
-        startActivity(actividadHijo);
+        boolean encontrado = false;
+        int index = 0;
+        while (index < this.temp.size() && !encontrado){
+            if(temp.get(index).getTitulo().equals(title)){
+                encontrado = true;
+            }else{
+                ++index;
+            }
+        }
+
+        if(encontrado) {
+            Intent actividadHijo = new Intent(Leyes.this, Articulos.class);
+            actividadHijo.putExtra(Intent.EXTRA_TEXT, title);
+
+            actividadHijo.putExtra("resumenLey", this.temp.get(index).getDescripcion());
+
+            startActivity(actividadHijo);
+        }
+
+
     }
 
     public void setDataList(){

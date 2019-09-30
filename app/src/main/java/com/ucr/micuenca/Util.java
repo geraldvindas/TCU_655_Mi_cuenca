@@ -12,6 +12,7 @@ public class Util {
 
     public static final int TAMANO_DESCRIPCION_LISTA = 120;
     public static final String URL_IMAGEN_DEFECTO = "imagenes/zonif_ejm.jpg";
+    public static final String URL_IMAGENES_CONCEPTO = "imagenes/conceptos/";
 
     public static int getColor(int position, Context context){
         int module = position % 6;
@@ -44,7 +45,7 @@ public class Util {
     public static Drawable loadDrawableFromAssets(Context context, String path)
     {
         try {
-            InputStream stream = context.getAssets().open(path);
+            InputStream stream = context.getAssets().open(URL_IMAGENES_CONCEPTO + path);
             return Drawable.createFromStream(stream, null);
         } catch (Exception ignored) {
             InputStream stream = null;
