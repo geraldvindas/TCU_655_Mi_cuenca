@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 public class Util {
@@ -42,13 +43,17 @@ public class Util {
 
     public static Drawable loadDrawableFromAssets(Context context, String path)
     {
-        if(path == null){
-            path = URL_IMAGEN_DEFECTO;
-        }
-        try (InputStream stream = context.getAssets().open(path)) {
+        try {
+            InputStream stream = context.getAssets().open(path);
             return Drawable.createFromStream(stream, null);
         } catch (Exception ignored) {
-            return null;
+            InputStream stream = null;
+            try {
+                stream = context.getAssets().open(URL_IMAGEN_DEFECTO);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return Drawable.createFromStream(stream, null);
         }
     }
 }
