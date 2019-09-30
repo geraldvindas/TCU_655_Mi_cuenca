@@ -15,6 +15,8 @@ import android.widget.Toast;
 public class Menu extends Activity {
 
     RelativeLayout mMenu;
+    private static final int TIME_INTERVAL = 2000;
+    private long mBackPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,5 +110,22 @@ public class Menu extends Activity {
                     .putBoolean("isFirstRun", false)
                     .apply();
         }
+    }
+
+    public void closeApp(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            this.closeApp();
+        } else {
+            Toast.makeText(getBaseContext(), "Presione atrás dos veces para salir",    Toast.LENGTH_SHORT).show();
+        }
+        mBackPressed = System.currentTimeMillis();
     }
 }
