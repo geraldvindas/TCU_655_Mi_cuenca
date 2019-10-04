@@ -263,18 +263,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_numeroHabitantes"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:orientation="vertical">
 
             <TextView
-                style="@style/TextViewHeader2"
+                style="@style/TextViewHeader1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/text_historia"
-                android:text="Historia: " />
+                android:text="Historia comunidad"
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/text_infoHistoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" " />
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -288,7 +292,7 @@
             <ImageView
                 android:id="@+id/imageView_imagenASADA"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:adjustViewBounds="true"
                 android:layout_gravity="bottom|center"/>
