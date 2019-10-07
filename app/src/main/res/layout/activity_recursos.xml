@@ -12,44 +12,26 @@
         android:textStyle="bold"/>
 
     <Button
+        style="@style/LinkButton"
         android:id="@+id/facebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:padding="16dp"
         android:text="Página de Facebook"
-        android:textSize="12sp"
-        android:linksClickable="true"
         android:onClick="goToFacebook"
-        android:drawableLeft="@drawable/facebook"/>
+        android:drawableStart="@drawable/fb_logo"/>
 
     <Button
+        style="@style/LinkButton"
         android:id="@+id/youtube"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:padding="16dp"
         android:text="Video"
-        android:textSize="12sp"
-        android:linksClickable="true"
         android:onClick="goToYoutube"
-        android:drawableLeft="@drawable/youtube"/>
+        android:drawableStart="@drawable/yotube_logo"/>
 
 
     <Button
+        style="@style/LinkButton"
         android:id="@+id/descargar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:padding="16dp"
         android:text="Libros de Gestión comunitaria del agua"
-        android:textSize="12sp"
-        android:linksClickable="true"
         android:onClick="goToDescarga"
-        android:drawableLeft="@drawable/descargar"/>
+        android:drawableStart="@drawable/download_logo"/>
 
 
 
