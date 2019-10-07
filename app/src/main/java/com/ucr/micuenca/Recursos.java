@@ -37,6 +37,10 @@ public class Recursos extends Activity{
         goToUrl ( "https://mega.nz/#F!BxR31S4B!ilbE-0BVa8QMk1tgk2cNHA");
     }
 
+    public void goToGitHub (View view) {
+        goToUrl ( "https://github.com/geraldvindas/TCU_655_Mi_cuenca");
+    }
+
     public void goToUrl (String url) {
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);

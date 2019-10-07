@@ -33,6 +33,13 @@
         android:onClick="goToDescarga"
         android:drawableStart="@drawable/download_logo"/>
 
+    <Button
+        style="@style/LinkButton"
+        android:id="@+id/repositorio"
+        android:text="Código fuente aplicación"
+        android:onClick="goToGitHub"
+        android:drawableStart="@drawable/git_logo"/>
+
 
 
 </LinearLayout>
