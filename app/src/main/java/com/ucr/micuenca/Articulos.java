@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,7 +38,10 @@ public class Articulos extends Activity implements ListAdapterArticulo.ListAdapt
             this.resumenLey = intentLeyes.getStringExtra("resumenLey");
 
             TextView titulo = findViewById(R.id.tv_titulo);
+            // titulo.setMovementMethod(new ScrollingMovementMethod());
+            titulo.setSelected(true);
             titulo.setText(this.idLey);
+
             //this.idLey = textoRecibido;
             RelativeLayout menu = findViewById(R.id.titulo_menu);
             menu.setOnClickListener(new View.OnClickListener() {
