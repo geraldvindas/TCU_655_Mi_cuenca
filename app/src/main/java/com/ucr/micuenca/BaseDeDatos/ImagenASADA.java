@@ -27,7 +27,7 @@ public class ImagenASADA implements Comparable<ImagenASADA> {
     }
 
     public String getImagen() {
-        return "imagenes/" + imagen;
+        return imagen;
     }
 
     public void setImagen(String imagen) {

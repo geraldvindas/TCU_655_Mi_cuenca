@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VistaASADAS extends Activity {
+    public static final String URL_IMAGENES_ASADA = "imagenes/asadas/";
 
     private RecyclerView mRecyclerView;
     private List<Comunidad> comunidadList;
@@ -122,6 +123,8 @@ public class VistaASADAS extends Activity {
         if(encontradoImagen){
             String dato_imagenASADA = imagenAsadaList.get(indexImagen).getImagen();
             ImageView imagen = findViewById(R.id.imageView_imagenASADA);
+            if(dato_imagenASADA != null)
+                dato_imagenASADA = URL_IMAGENES_ASADA + dato_imagenASADA;
             imagen.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenASADA));
         }
 
