@@ -12,7 +12,7 @@ public class Util {
 
     public static final int TAMANO_DESCRIPCION_LISTA = 120;
     public static final String URL_IMAGEN_DEFECTO = "imagenes/zonif_ejm.jpg";
-    public static final String URL_IMAGENES_CONCEPTO = "imagenes/conceptos/";
+
 
     public static int getColor(int position, Context context){
         int module = position % 6;
@@ -44,17 +44,24 @@ public class Util {
 
     public static Drawable loadDrawableFromAssets(Context context, String path)
     {
+        if (path == null){
+            return getImagenDefecto(context);
+        }
         try {
-            InputStream stream = context.getAssets().open(URL_IMAGENES_CONCEPTO + path);
+            InputStream stream = context.getAssets().open(path);
             return Drawable.createFromStream(stream, null);
         } catch (Exception ignored) {
-            InputStream stream = null;
-            try {
-                stream = context.getAssets().open(URL_IMAGEN_DEFECTO);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return Drawable.createFromStream(stream, null);
+            return getImagenDefecto(context);
         }
+    }
+
+    public static Drawable getImagenDefecto(Context context) {
+        InputStream stream = null;
+        try {
+            stream = context.getAssets().open(URL_IMAGEN_DEFECTO);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Drawable.createFromStream(stream, null);
     }
 }

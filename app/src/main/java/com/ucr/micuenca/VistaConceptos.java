@@ -12,6 +12,8 @@ import com.ucr.micuenca.R;
 import com.ucr.micuenca.Util;
 
 public class VistaConceptos extends Activity{
+    public static final String URL_IMAGENES_CONCEPTO = "imagenes/conceptos/";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_conceptos);
@@ -36,6 +38,8 @@ public class VistaConceptos extends Activity{
         nombreConcepto.setText(tituloConcepto);
 
         ImageView imageView = findViewById(R.id.imageView_imgConcepto);
+        if(dato_imagenConcepto != null)
+            dato_imagenConcepto = URL_IMAGENES_CONCEPTO + dato_imagenConcepto;
         imageView.setImageDrawable(Util.loadDrawableFromAssets(getApplicationContext(), dato_imagenConcepto));
 
 
