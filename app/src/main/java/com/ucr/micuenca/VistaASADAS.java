@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.ucr.micuenca.BaseDeDatos.Comunidad;
 import com.ucr.micuenca.BaseDeDatos.ImagenASADA;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class VistaASADAS extends Activity {

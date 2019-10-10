@@ -7,10 +7,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ucr.micuenca.Menu;
-import com.ucr.micuenca.R;
-import com.ucr.micuenca.Util;
-
 public class VistaConceptos extends Activity{
     public static final String URL_IMAGENES_CONCEPTO = "imagenes/conceptos/";
 

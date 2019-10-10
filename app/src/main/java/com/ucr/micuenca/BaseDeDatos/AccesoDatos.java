@@ -5,10 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class AccesoDatos {
     private SQLiteOpenHelper openHelper;
     private SQLiteDatabase baseDatos;
