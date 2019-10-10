@@ -3,12 +3,16 @@ package com.ucr.micuenca;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import com.ucr.micuenca.BaseDeDatos.DatoCurioso;
+
+import java.util.List;
 import java.util.Random;
 
 public class DatosCuriosos extends Activity {
@@ -16,6 +20,7 @@ public class DatosCuriosos extends Activity {
     Activity mParentActivity;
     static int anterior = 20;
     TextView mText;
+    List<DatoCurioso> datos;
 
 
     @Override
@@ -34,6 +39,11 @@ public class DatosCuriosos extends Activity {
         });
 
         mText = findViewById(R.id.texto);
+        mText.setMovementMethod(new ScrollingMovementMethod());
+
+        DatoCurioso dato = new DatoCurioso();
+        datos = dato.getDatosCuriosos(getApplicationContext());
+
         next();
 
         Button button  = findViewById(R.id.button10);
@@ -43,27 +53,8 @@ public class DatosCuriosos extends Activity {
             }
         });
 
+
     }
-
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//
-//        View view = inflater.inflate(R.layout.datosCuriosos, container, false);
-//        mText = view.findViewById(R.id.texto);
-//        next();
-//
-//        Button button  = view.findViewById(R.id.button10);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                next();
-//            }
-//        });
-//
-//        return view;
-//    }
-
-
-
 
     //Metodo para escoger una dato curioso aleatorio diferente al anterior.
 
@@ -71,10 +62,11 @@ public class DatosCuriosos extends Activity {
         int random = anterior;
         Random rand = new Random();
         while(random == anterior) {
-            random = rand.nextInt(9);
+            random = rand.nextInt(datos.size());
         }
         anterior = random;
-        mText.setText(Global.datosCuriosos[random]);
+        if(random < datos.size())
+            mText.setText(datos.get(random).getDato());
     }
 
 }
