@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
