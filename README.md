@@ -67,3 +67,8 @@ Durante el desarrollo de esta aplicación se hicieron diversas encuestas en las 
 
 * Un juego relacionado con la temática de la aplicación, dirigido a niños, en el cual estos puedan aprender más sobre la cuenca y la labor de este TCU.
 
+* Implementar pantalla con pruebas de agua y hace analisis estadísticos. 
+
+* Cambiar el mapa ARCGIS por alguna funcionalidad distinta, ya que incrementa el tamaño del app.
+
+

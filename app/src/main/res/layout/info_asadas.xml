@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/infoAsada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,284 +14,292 @@
             android:textSize="14sp"
             android:textStyle="bold"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo_menu">
         <LinearLayout
-            android:id="@+id/layout_nombreAsada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_below="@+id/titulo_menu"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader1"
-                android:id="@+id/tv_titulo_asada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:text=""
-                android:padding="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_aguaConsumida"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_nombreAsada"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_aguaConsumida"
-                android:text="Agua Consumida: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoAguaConsumida"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!--<LinearLayout-->
-        <!--android:id="@+id/layout_constante"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_below="@+id/layout_aguaConsumida"-->
-        <!--android:padding="10dp">-->
-
-        <!--<TextView-->
-        <!--android:id="@+id/text_constante"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Constante: " />-->
-
-        <!--<TextView-->
-        <!--android:id="@+id/text_infoConstante"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text=" " />-->
-        <!--</LinearLayout>-->
-
-
-        <LinearLayout
-            android:id="@+id/layout_anoInfraestructura"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_aguaConsumida"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_anoInfraestructura"
-                android:text="Año infraestructura: " />
-
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoAnoInfraestructura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_anoCreacion"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_anoInfraestructura"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_anoCreacion"
-                android:text="Año Creación: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoAnoCreacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_cantidadTomas"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_anoCreacion"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_cantidadTomas"
-                android:text="Cantidad de tomas de agua: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoCantidadTomas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_cantidadTuberias"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_cantidadTomas"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_cantidadTuberias"
-                android:text="Cantidad de tuberías: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoCantidadTuberias"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_cantidadTanques"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_cantidadTuberias"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_cantidadTanques"
-                android:text="Cantidad de tanques: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoCantidadTanques"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_cantidadBeneficiados"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_cantidadTanques"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_cantidadBeneficiados"
-                android:text="Cantidad de personas beneficiadas: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoCantidadBeneficiados"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_nombreSubcuenca"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_cantidadBeneficiados"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_nombreSubcuenca"
-                android:text="Subcuenca a la que pertenece: " />
-
-            <TextView
-                style="@style/TextViewDescription"
-                android:id="@+id/text_infoNombreSubcuenca"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_nombreComunidad"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_nombreSubcuenca"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_nombreComunidad"
-
-                android:text="Comunidad: " />
-
-            <TextView
-                android:id="@+id/text_infoNombreComunidad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_numeroHabitantes"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/layout_nombreComunidad"
-            android:padding="10dp">
-
-            <TextView
-                style="@style/TextViewHeader2"
-                android:id="@+id/text_numeroHabitantes"
-
-                android:text="Número de habitantes: " />
-
-            <TextView
-                android:id="@+id/text_infoNumeroHabitantes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_historia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layout_numeroHabitantes"
-            android:padding="10dp"
             android:orientation="vertical">
-
-            <TextView
-                style="@style/TextViewHeader1"
+            <LinearLayout
+                android:id="@+id/layout_nombreAsada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_historia"
-                android:text="Historia comunidad"
-                android:gravity="center"/>
+                android:layout_marginBottom="3dp"
+                android:layout_below="@+id/titulo_menu"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/text_infoHistoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
+                <TextView
+                    style="@style/TextViewHeader1"
+                    android:id="@+id/tv_titulo_asada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:padding="10dp"/>
 
-        <LinearLayout
-            android:id="@+id/layout_imagen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/layout_historia"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:padding="10dp">
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView_imagenASADA"
+            <LinearLayout
+                android:id="@+id/layout_aguaConsumida"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_nombreAsada"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_aguaConsumida"
+                    android:text="Agua Consumida: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoAguaConsumida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/layout_constante"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_below="@+id/layout_aguaConsumida"-->
+            <!--android:padding="10dp">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/text_constante"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Constante: " />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/text_infoConstante"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" " />-->
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/layout_anoInfraestructura"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_aguaConsumida"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_anoInfraestructura"
+                    android:text="Año infraestructura: " />
+
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoAnoInfraestructura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_anoCreacion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_anoInfraestructura"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_anoCreacion"
+                    android:text="Año Creación: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoAnoCreacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cantidadTomas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_anoCreacion"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_cantidadTomas"
+                    android:text="Cantidad de tomas de agua: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoCantidadTomas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cantidadTuberias"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_cantidadTomas"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_cantidadTuberias"
+                    android:text="Cantidad de tuberías: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoCantidadTuberias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cantidadTanques"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_cantidadTuberias"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_cantidadTanques"
+                    android:text="Cantidad de tanques: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoCantidadTanques"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cantidadBeneficiados"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_cantidadTanques"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_cantidadBeneficiados"
+                    android:text="Cantidad de personas beneficiadas: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoCantidadBeneficiados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_nombreSubcuenca"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_cantidadBeneficiados"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_nombreSubcuenca"
+                    android:text="Subcuenca a la que pertenece: " />
+
+                <TextView
+                    style="@style/TextViewDescription"
+                    android:id="@+id/text_infoNombreSubcuenca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_nombreComunidad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_nombreSubcuenca"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_nombreComunidad"
+
+                    android:text="Comunidad: " />
+
+                <TextView
+                    android:id="@+id/text_infoNombreComunidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_numeroHabitantes"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/layout_nombreComunidad"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextViewHeader2"
+                    android:id="@+id/text_numeroHabitantes"
+
+                    android:text="Número de habitantes: " />
+
+                <TextView
+                    android:id="@+id/text_infoNumeroHabitantes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_historia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="bottom|center"/>
+                android:layout_below="@+id/layout_numeroHabitantes"
+                android:padding="10dp"
+                android:orientation="vertical">
 
+                <TextView
+                    style="@style/TextViewHeader1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_historia"
+                    android:text="Historia comunidad"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/text_infoHistoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_historia"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView_imagenASADA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="bottom|center"/>
+
+            </LinearLayout>
         </LinearLayout>
 
-    </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
