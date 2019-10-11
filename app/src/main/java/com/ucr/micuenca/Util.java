@@ -1,6 +1,7 @@
 package com.ucr.micuenca;
 
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;
@@ -48,7 +49,7 @@ public class Util {
             return getImagenDefecto(context);
         }
         try {
-            InputStream stream = context.getAssets().open(path);
+            InputStream stream = PantallaCarga.mExpansionFile.getInputStream(path);
             return Drawable.createFromStream(stream, null);
         } catch (Exception ignored) {
             return getImagenDefecto(context);
@@ -56,9 +57,10 @@ public class Util {
     }
 
     public static Drawable getImagenDefecto(Context context) {
+
         InputStream stream = null;
         try {
-            stream = context.getAssets().open(URL_IMAGEN_DEFECTO);
+            stream = PantallaCarga.mExpansionFile.getInputStream(URL_IMAGEN_DEFECTO);
         } catch (IOException e) {
             e.printStackTrace();
         }
