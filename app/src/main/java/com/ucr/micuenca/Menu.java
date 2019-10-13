@@ -32,19 +32,19 @@ public class Menu extends Activity {
         FrameLayout recursos = findViewById(R.id.fl_recursos);
         mapa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Menu.this, Mapa.class);
+                Intent next = new Intent(Menu.this, MapaSlider.class);
                 startActivity(next);
             }
         });
 
         //cambiar la clase dependiendo de la que quiera se llamada por el momento todas van a mapa
 
-        conceptos.setOnClickListener(new View.OnClickListener() {
+        /*conceptos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(Menu.this, Mapa.class);
+                Intent next = new Intent(Menu.this,  MapaSlider.class);
                 startActivity(next);
             }
-        });
+        });*/
 
         leyes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
