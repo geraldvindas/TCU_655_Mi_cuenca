@@ -56,7 +56,7 @@ public class Concepto extends DatoGeneral implements Comparable<Concepto> {
 
     @Override
     public int compareTo(Concepto o) {
-        return 0;
+        return nombreConcepto.compareTo(o.nombreConcepto);
     }
 
     public List<Concepto> getListaConcepto(Context context){
