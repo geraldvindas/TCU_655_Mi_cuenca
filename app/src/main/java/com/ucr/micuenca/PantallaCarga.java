@@ -16,9 +16,8 @@ public class PantallaCarga extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-                Intent next2 = new Intent(PantallaCarga.this, Menu.class);
-                startActivity(next2);
+                Intent next = new Intent(PantallaCarga.this, Menu.class);
+                startActivity(next);
                 finish();
             }
 

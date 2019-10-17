@@ -10,7 +10,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 public class MapaImagenes extends PagerAdapter {
     private Context mContext;
-    private int[] nImagenesId = new int[] {R.drawable.mapa_completo, R.drawable.mapa_izquierda, R.drawable.mapa_centro, R.drawable.mapa_derecha};
+    private int[] nImagenesId =  {R.drawable.mapa_completo, R.drawable.mapa_izquierda, R.drawable.mapa_centro, R.drawable.mapa_derecha};
 
     MapaImagenes(Context context){
         mContext = context;
@@ -20,6 +20,8 @@ public class MapaImagenes extends PagerAdapter {
     public int getCount() {
         return nImagenesId.length;
     }
+
+
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {

@@ -31,15 +31,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".Menu"
-            android:label="Menu"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".Mapa"
-            android:label="Mapa"
-            android:screenOrientation="portrait"/>
         <activity android:name=".Leyes" />
         <activity android:name=".ASADAS" />
         <activity android:name=".Zonificacion" />
@@ -51,6 +42,8 @@
         <activity android:name=".DatosCuriosos"/>
         <activity android:name=".Recursos" />
         <activity android:name=".VistaArticulo" />
+        <activity android:name=".MapaSlider" />
+        <activity android:name=".Menu" />
     </application>
 
 </manifest>

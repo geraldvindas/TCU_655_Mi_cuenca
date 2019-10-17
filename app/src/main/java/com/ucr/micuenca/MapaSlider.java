@@ -3,7 +3,6 @@ package com.ucr.micuenca;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,11 +18,12 @@ public class MapaSlider extends Activity {
         setContentView(R.layout.activity_mapa_imagenes);
 
         TextView titulo = findViewById(R.id.tv_titulo);
-        titulo.setText("Mapa");
+        titulo.setText("Imagenes Mapa");
         RelativeLayout menu = findViewById(R.id.titulo_menu);
+
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent next = new Intent(MapaSlider.this, com.ucr.micuenca.Menu.class);
+                Intent next = new Intent(MapaSlider.this, Menu.class);
                 startActivity(next);
             }
         });
@@ -31,5 +31,6 @@ public class MapaSlider extends Activity {
         ViewPager viewPager = findViewById(R.id.activity_mapa_slider);
         MapaImagenes mapa_imagenes = new MapaImagenes(this);
         viewPager.setAdapter(mapa_imagenes);
+
     }
 }
